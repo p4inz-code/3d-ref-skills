@@ -8,7 +8,7 @@ description: >
   "need client approval", "client moodboard", "avoid revisions", "scope creep",
   "client reference". Works for any 3D asset type: props, characters, environments,
   product visualization, archviz, game assets, VFX.
-version: 2.0.0
+version: 2.1.0
 author: PainZ (github.com/p4inz-code)
 license: MIT
 ---

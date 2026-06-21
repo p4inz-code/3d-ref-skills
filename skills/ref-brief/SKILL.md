@@ -8,7 +8,7 @@ description: >
   "what references do I need for". Works with Maya, Blender, ZBrush, 3ds Max,
   Houdini, and any DCC. Engine-agnostic: UE5, Unity, Godot, web, film, Fab
   marketplace.
-version: 2.0.0
+version: 2.1.0
 author: PainZ (github.com/p4inz-code)
 license: MIT
 ---

@@ -8,7 +8,7 @@ description: >
   "check my references", "my model looks off", "reference audit", "something's
   missing", "proportions feel wrong", "why doesn't this look right", "audit my
   refs". Works with any DCC (Maya, Blender, ZBrush, 3ds Max) and any asset type.
-version: 2.0.0
+version: 2.1.0
 author: PainZ (github.com/p4inz-code)
 license: MIT
 ---

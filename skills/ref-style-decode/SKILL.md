@@ -9,7 +9,7 @@ description: >
   "decode this style", "I want my work to look like X", "break down this artist's
   approach", "what makes this work". Works for any asset type: characters,
   props, environments, vehicles, VFX. DCC-agnostic.
-version: 2.0.0
+version: 2.1.0
 author: PainZ (github.com/p4inz-code)
 license: MIT
 ---

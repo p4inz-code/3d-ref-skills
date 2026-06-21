@@ -9,7 +9,7 @@ description: >
   submission", "product listing", "store asset", "Sketchfab store", "ArtStation
   marketplace". Works with any asset category: environments, props, characters,
   VFX, modular kits, textures.
-version: 2.0.0
+version: 2.1.0
 author: PainZ (github.com/p4inz-code)
 license: MIT
 ---
