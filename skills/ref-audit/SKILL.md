@@ -8,7 +8,7 @@ description: >
   "check my references", "my model looks off", "reference audit", "something's
   missing", "proportions feel wrong", "why doesn't this look right", "audit my
   refs". Works with any DCC (Maya, Blender, ZBrush, 3ds Max) and any asset type.
-version: 2.1.0
+version: 3.0.0
 author: PainZ (github.com/p4inz-code)
 license: MIT
 ---
@@ -250,3 +250,28 @@ IMMEDIATE ACTION (the one thing to do before opening the DCC):
 
 Save as `ref-audit_[assetname]_v[N].md`. Version it — audits at blockout,
 mid-detail, and pre-UV phases will catch different things.
+
+#### VFX Element
+
+**V1 — Phase motion reference (onset / peak / dissipation)**
+Do they have real-world footage showing all three phases of this effect type?
+- Symptom if missing: Effect that transitions incorrectly between phases —
+  onset too instant, dissipation too fast, peak wrong scale or density.
+
+**V2 — Scale anchor for the effect**
+Do they have a reference showing this effect at the correct physical scale
+next to a known-size object?
+- Symptom if missing: Explosions too small and too fast. Fire too large or too small.
+  The brain detects scale errors in VFX before consciously identifying them.
+
+**V3 — Color per zone (core / mid / edge)**
+Do they have reference showing the color gradient from the effect's hot core
+to its cooler edges?
+- Symptom if missing: Uniform color that reads as fake regardless of simulation quality.
+  Real fire is near-white at core, orange at mid, red-brown at edge.
+
+**V4 — Timing reference with frame counter**
+Do they have slow-motion footage or a reference with known timing they can
+measure their simulation against?
+- Symptom if missing: Timing that feels subjectively "off" with no target to tune toward.
+  Parameter iteration with no physical reference is blind guessing.

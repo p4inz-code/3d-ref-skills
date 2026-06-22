@@ -131,7 +131,7 @@ Reference Engineering applies to any 3D artist who produces assets for:
 - Marketplace publishing (Fab, Sketchfab Store, ArtStation, CGTrader, Gumroad)
 - Freelance commissions (props, characters, environments, vehicles, VFX)
 - VFX production (simulations, particles, destruction)
-- Film and archviz (offline rendering pipelines)
+- Film and archviz (offline rendering pipelines) — architectural visualization, product rendering
 - Personal portfolio (students, career-changers, generalists)
 
 The discipline scales from a beginner modeling their first prop to a senior artist running a production pipeline. The principles are the same. The depth of application scales with experience and asset complexity.

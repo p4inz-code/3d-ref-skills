@@ -6,7 +6,7 @@ description: >
   "explosion brief", "smoke reference", "Niagara reference", "Houdini sim ref",
   "I'm about to build a VFX effect", "need references for a simulation".
   Works with Niagara, Houdini, EmberGen, Blender geometry nodes, Unity VFX Graph.
-version: 2.1.0
+version: 3.0.0
 author: PainZ (github.com/p4inz-code)
 license: MIT
 ---
@@ -334,3 +334,113 @@ Save as `ref-vfx_[effectname]_v1.md` in the VFX project folder.
 Update to v2 after first sim iteration — you will have discovered gaps in your
 motion reference that weren't obvious until you saw the simulation running.
 This is expected. Re-audit and re-gather before continuing to detail work.
+
+---
+
+## Extended Effect Type Guides
+
+### Weather and Environmental Effects
+
+These effects have unique reference requirements distinct from fire/explosion:
+
+**Rain:**
+- Motion reference: real rain photography at multiple exposure lengths
+  (long exposure shows streaks, short shows drops — know which you're simulating)
+- Scale reference: raindrop size vs puddle splash size vs storm intensity
+- Ground interaction: puddle ripple timing, splash crown shape, wet surface sheen
+- Search: "rain impact slow motion", "puddle splash crown high speed camera"
+
+**Snow:**
+- Accumulation reference: how snow builds on horizontal vs angled vs vertical surfaces
+- Particle size at scale: snowflake size vs blizzard density vs light flurry
+- Wind interaction: drifting patterns, swirl behind obstacles
+- Search: "snowfall photography long exposure", "snow accumulation surface reference"
+
+**Lightning:**
+- Branching pattern reference: fractal branching is never straight
+- Duration: main bolt 0.2–0.5 seconds, afterglow 0.5–1.5 seconds
+- Color: near-white core, blue-purple outer glow, atmospheric scatter
+- Search: "lightning strike slow motion photography", "lightning bolt branching pattern"
+
+**Wind/Dust:**
+- Direction consistency: wind-driven particles have a dominant direction vector
+- Turbulence zones: eddies form behind obstacles — study fluid dynamics reference
+- Density gradient: thin at leading edge, denser at center of mass
+- Search: "dust storm photography reference", "wind-driven debris slow motion"
+
+---
+
+### Looping VFX Specific Requirements
+
+If the effect must loop seamlessly (ambient fire, continuous magic, idle effects):
+
+```
+LOOP REQUIREMENTS:
+  Loop type:      [hard cut loop / crossfade loop / stagger loop]
+  Loop duration:  [target loop length in frames at target FPS]
+  Loop point:     [where in the animation cycle the loop seam sits]
+  Seam strategy:  [how the loop seam is hidden — staggered instances / crossfade / etc.]
+
+LOOP REFERENCE:
+  Search: "[effect type] seamless loop VFX reference"
+  Study: how other artists hide loop seams at this effect type
+  Critical: the loop point must be at a low-energy moment in the cycle —
+            never at peak intensity where the cut will be visible
+
+STAGGER STRATEGY:
+  For ambient effects using multiple instances:
+  - Stagger instance start times by ±[N] frames
+  - Vary instance scale by ±10–20%
+  - Vary instance rotation by ±[N] degrees
+  This prevents synchronization artifacts where all instances peak simultaneously
+```
+
+---
+
+### Magic and Stylized Effects
+
+Stylized and magic effects have no real-world direct reference. Use indirect reference:
+
+```
+INDIRECT REFERENCE STRATEGY:
+  Physical basis:   [what real-world phenomenon does this loosely reference?]
+                    Even abstract magic has a physical basis — find it.
+                    e.g. "healing magic → bioluminescence + slow fluid motion"
+                    e.g. "lightning magic → plasma arc + electrical discharge"
+                    e.g. "fire magic → real fire + additive color shift"
+
+STYLE REFERENCE:
+  Study 5 similar effects in games of the same genre. Identify:
+  - Color palette convention for this magic type in this genre
+  - Particle scale convention (magic particles are often larger than physical reality)
+  - Speed convention (magic is often 1.5–2× slower than equivalent physical effect)
+  - Emission/glow intensity convention
+
+SHAPE LANGUAGE:
+  Stylized effects must have intentional shape language — not just particles.
+  - What primary shapes appear in the effect? (spirals / shards / orbs / tendrils)
+  - Do the shapes echo the character or ability that produces them?
+  - Do the shapes read clearly at the smallest screen size this effect will appear at?
+
+READABLE AT SCALE:
+  Game VFX must read at thumbnail size (RTS view) AND at full screen (FPS view).
+  Gather reference at both scales. Effects designed only for close view will
+  disappear in wide shots. Effects designed only for wide view will look blurry close.
+```
+
+---
+
+## Updated Pre-Simulation Checklist
+
+- [ ] Phase motion reference — all phases have real-world footage
+- [ ] Color gradient documented — core / mid / edge zones
+- [ ] Scale anchor confirmed in real-world units
+- [ ] Timing documented in frames at target FPS
+- [ ] Environment context reference gathered
+- [ ] Pipeline-specific parameter reference found
+- [ ] Texture/flipbook spec documented (if sprite-based)
+- [ ] Viewed 3+ real-world examples at correct scale
+- [ ] Most common mistake noted and planned against
+- [ ] Loop strategy documented (if looping effect)
+- [ ] Indirect reference identified (if stylized/magic effect)
+- [ ] Effect readable at minimum intended screen size confirmed

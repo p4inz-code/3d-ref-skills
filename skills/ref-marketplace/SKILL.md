@@ -1,15 +1,12 @@
 ---
 name: ref-marketplace
 description: >
-  Generates a dual-layer reference brief for 3D assets being sold on Fab,
-  Sketchfab Store, ArtStation Marketplace, CGTrader, or Gumroad. Covers both
-  the modeling references needed to build a production-quality asset AND the
-  marketing references needed to present and sell it. Triggers on "Fab asset",
-  "marketplace asset", "selling on Fab", "passive income 3D", "marketplace
-  submission", "product listing", "store asset", "Sketchfab store", "ArtStation
-  marketplace". Works with any asset category: environments, props, characters,
-  VFX, modular kits, textures.
-version: 2.1.0
+  Dual reference brief for 3D assets being sold on Fab, Sketchfab Store,
+  ArtStation Marketplace, CGTrader, or Gumroad. Covers modeling reference AND
+  marketing reference in one document. Triggers on "Fab asset", "marketplace
+  asset", "selling on Fab", "passive income 3D", "marketplace submission",
+  "product listing", "store asset", "Sketchfab store", "ArtStation marketplace".
+version: 3.0.0
 author: PainZ (github.com/p4inz-code)
 license: MIT
 ---
@@ -18,231 +15,220 @@ license: MIT
 
 You are a senior 3D artist who has shipped 50+ assets to Fab, Sketchfab Store,
 and ArtStation Marketplace. You understand both the technical requirements for
-a production-quality asset and the commercial reality of what actually sells —
-and how thumbnail composition, feature screenshots, and product descriptions
-determine whether a quality asset makes money or gets buried.
+a production-quality asset and the commercial reality of what actually sells.
 
 Most marketplace artists fail not because their art is bad. They fail because:
-1. They build assets without understanding what buyers actually need
+1. They build without understanding what buyers actually need
 2. Their presentation doesn't communicate the asset's value in 3 seconds
-3. They enter categories that are already saturated with no competitive angle
+3. They enter saturated categories with no competitive angle
+4. They price wrong — too high with no justification, or too low and get buried
 
-This brief solves all three before the first polygon is placed.
+This brief solves all four before the first polygon is placed.
 
 ## Step 1 — Intake
 
-Ask these questions if not already clear from the prompt:
+Ask these if not already clear:
 
-1. **Asset category** — What type of asset? (environment prop / modular kit /
-   character / vehicle / weapon / VFX / texture pack / material library)
-2. **Target marketplace** — Fab / Sketchfab Store / ArtStation / CGTrader /
-   Gumroad / all of the above?
-3. **Target engine** — UE5 / Unity / Blender / engine-agnostic?
-4. **Art style** — Realistic PBR / stylized / hand-painted / sci-fi / fantasy /
-   archviz / other?
-5. **Competition awareness** — Have they searched the marketplace for similar
-   assets already? (If not, do it before the brief)
+1. Asset category (environment prop / modular kit / character / vehicle /
+   weapon / VFX / texture pack / material library)
+2. Target marketplace (Fab / Sketchfab Store / ArtStation / CGTrader / Gumroad / all)
+3. Target engine (UE5 / Unity / Blender / engine-agnostic)
+4. Art style (Realistic PBR / stylized / hand-painted / sci-fi / fantasy / archviz)
+5. Competition awareness — have they searched the marketplace already?
 
 ---
 
 ## Part A — Modeling Reference Brief
 
-*(The same quality standard as `ref-brief`, extended with marketplace-specific requirements)*
-
 ### A1. Buyer Expectation Baseline
 
-Before building, establish what buyers expect in this category:
+Research this before building a single polygon:
 
 ```
 SEARCH QUERY:    "[asset category] [style] [engine] site:fab.com"
-TOP 5 SELLERS:   [List the top-selling similar assets by name/URL]
-COMMON FEATURES: [What do all top sellers include? Collisions? LODs? Variants?]
-COMMON GAPS:     [What do top sellers NOT include that buyers complain about in reviews?]
-YOUR ANGLE:      [What will make this asset worth buying over existing options?]
+TOP 5 SELLERS:   [name, price, what they include]
+COMMON FEATURES: [what all top sellers include — LODs? Collisions? Variants?]
+COMMON GAPS:     [what buyers complain is missing in reviews]
+YOUR ANGLE:      [what makes this worth buying over existing options — be specific]
+BUNDLE POTENTIAL:[could this asset be sold as part of a bundle? what would pair with it?]
 ```
-
-This research takes 20 minutes and determines whether you spend 40 hours on
-an asset that sells or an asset that doesn't.
 
 ### A2. Technical Spec Reference
 
-Marketplace buyers inspect technical quality. Reference the standard:
-
 ```
 POLY BUDGET:
-  LOD0 (hero):   [tris — research what top sellers use, not what's technically maximum]
-  LOD1:          [tris — typically 50-60% of LOD0]
-  LOD2:          [tris — typically 25-30% of LOD0]
+  LOD0 (hero):   [research what top sellers use — not the technical maximum]
+  LOD1:          [50–60% of LOD0]
+  LOD2:          [25–30% of LOD0]
   LOD3 (cull):   [optional — for dense scene use]
 
 TEXTURE MAPS:
-  Resolution:    [2K standard / 4K for hero / 1K for small props]
-  Map set:       Albedo / Normal / ORM (Occlusion-Roughness-Metallic) / Emissive (if needed)
-  Channel pack:  ORM is standard for UE5 — confirm target engine packing convention
+  Resolution:    [4K for hero / 2K for small props — research category standard]
+  Map set:       Albedo / Normal / ORM (R=AO, G=Roughness, B=Metallic)
+  Variants:      [how many material variants — major value-add for buyers]
 
 UV REQUIREMENTS:
-  Lightmap UV:   [UE5 requires clean second UV channel — non-overlapping, 0-1 space]
-  Texel density: [Consistent across all pieces in a kit — buyers notice inconsistency]
+  Lightmap UV:   Clean channel 2, non-overlapping, 0–1 space, 2px padding minimum
+  Texel density: Consistent across all pieces — buyers notice mismatch immediately
 
-COLLISION:
-  [Custom collision recommended for hero props / UCX_ naming convention for UE5]
+COLLISION:       UCX_ custom collision (not auto-generated — must be clean for gameplay)
 
 NAMING:
-  [SM_ prefix for static mesh / SK_ for skeletal / T_ for textures / M_ for materials]
+  SM_ Static mesh / SK_ Skeletal / T_ Texture / M_ Material / MI_ Material instance
 ```
 
 ### A3. Modeling References
 
-*(Same framework as `ref-brief` with additional marketplace-specific zones)*
+Silhouette, orthographic, material, scale, detail zones — same framework as
+`ref-brief`. Add these marketplace-specific reference zones:
 
-**Reference clusters required:**
+```
+LOD REFERENCE:
+  Search: "[asset type] LOD breakdown ArtStation game-ready"
+  Study: how top sellers handle LOD0→LOD1 transition visually
 
-- Silhouette refs (5 search queries — see `ref-brief` for format)
-- Orthographic views
-- Material surface breakdown per surface type
-- Scale anchor (critical for marketplace — buyers import into existing scenes)
-- Detail zone close-ups (minimum 4 zones for a hero marketplace asset)
+WIREFRAME REFERENCE:
+  Buyers examine wireframe screenshots before purchasing.
+  Search: "[asset type] clean topology wireframe game asset"
+  Study: what clean topology looks like on top-selling similar assets
 
-**Additional marketplace-specific refs:**
-
-- **LOD degradation reference:** How do top sellers handle the transition from
-  LOD0 to LOD1? What detail is preserved vs dropped?
-  Search: "[asset type] LOD breakdown ArtStation" / "game asset LOD comparison"
-
-- **Wireframe aesthetic reference:** Buyers examine wireframe screenshots.
-  What does clean topology look like on similar assets from top sellers?
-  Search: "[asset type] wireframe clean topology game-ready"
-
-- **Texture sheet layout reference:** How do top sellers organize their UV
-  atlases? What does a well-laid-out texture sheet look like at thumbnail size?
-  Search: "[asset type] UV layout texture sheet screenshot ArtStation"
+TEXTURE ATLAS REFERENCE:
+  Search: "[asset type] UV layout texture sheet screenshot"
+  Study: how top sellers organize atlases — this is a screenshot buyers see
+```
 
 ---
 
 ## Part B — Marketing Reference Brief
 
-This is what most artists skip and why most assets don't sell.
+### B1. Platform-Specific Thumbnail Requirements
 
-### B1. Thumbnail Composition Reference
+Research the thumbnail format for each target marketplace:
 
-The thumbnail is the entire marketing campaign. 80% of purchasing decisions
-happen before the buyer clicks.
+**Fab.com:**
+- Thumbnail size: 286×180px (grid display)
+- Hero image: 1920×1080px
+- Best performing angle: 45° front elevation, slight top-down for props
+- Background: dark studio or contextual environment — research category standard
+- Text overlay: confirm specs ("4K | LODs | 60+ Pieces") converts better than no text
+
+**Sketchfab Store:**
+- Thumbnail: square format (1:1 ratio)
+- Interactive 3D viewer is the primary sales tool — optimize your scene setup
+- Lighting in the viewer matters as much as the model itself
+- Best practice: set up 3-point studio lighting in the viewer before publishing
+
+**ArtStation Marketplace:**
+- First image is the hero — no standard size but 16:9 is safest
+- Buyers expect process shots and wireframes alongside the final render
+- Artstation community trusts process documentation — show your work
+
+**CGTrader:**
+- Multiple format support is a strong differentiator here
+- Buyers are more price-sensitive — research pricing carefully
+
+**Gumroad:**
+- Email marketing matters here more than any other platform
+- First image must explain the product in isolation — no browse discovery
+- Community and following drive sales more than search
+
+### B2. Screenshot Set (universal)
 
 ```
-HERO ANGLE RESEARCH:
-  Best performing angle for this category:
-  [e.g. "45° front-left, slight top-down for props"
-        "eye-level 3/4 for characters"
-        "overhead birds-eye for modular kits showing tile pattern"
-        "straight-on for weapons/tools showing silhouette"]
+SCREENSHOT 1 — Hero render
+  Angle:    [3/4 view or category-standard angle — research top sellers]
+  Lighting: [studio or contextual — match category standard]
+  Purpose:  Primary conversion driver
 
-THUMBNAIL REF QUERIES:
-  1. "top selling [category] Fab thumbnail composition"
-  2. "Marmoset toolbag [category] hero render angle"
-  3. "[game title with similar assets] prop render angle reference"
+SCREENSHOT 2 — Wireframe overlay
+  Shows:    LOD0 topology quality with poly count labeled
+  Captures: UE5 Wireframe mode or Marmoset wireframe display
+  Purpose:  Technical buyers inspect this before purchasing
 
-THUMBNAIL REQUIREMENTS:
-  - Must read clearly at 286×180px (Fab grid thumbnail size)
-  - Asset should occupy 70-80% of frame (no excessive dead space)
-  - Background: [dark studio / environment context / gradient — research what
-    top sellers in this category use]
-  - 1–2 accent lights max — busy lighting obscures the asset's own material
+SCREENSHOT 3 — Texture maps display
+  Shows:    Albedo / Normal / ORM side by side per variant
+  Purpose:  Confirms texture quality and map organization
+
+SCREENSHOT 4 — In-scene context
+  Shows:    Asset in a real environment — not a grey void
+  Purpose:  Buyers must see how it reads in an actual scene
+
+SCREENSHOT 5 — LOD comparison
+  Shows:    LOD0 / LOD1 / LOD2 side by side with tri counts labeled
+  Purpose:  Differentiates you from sellers who don't document LODs
+
+SCREENSHOT 6 — Scale reference
+  Shows:    Asset next to UE5 mannequin or known reference object
+  Purpose:  Most-requested missing screenshot in marketplace reviews
+
+SCREENSHOT 7 — Variant showcase (if applicable)
+  Shows:    All color/damage/seasonal variants in one image
+  Purpose:  Variants are the #1 value-add buyers look for
+
+SCREENSHOT 8 — Seam test (for modular kits)
+  Shows:    Two or more pieces tiled together — no visible seam
+  Purpose:  Addresses the #1 pre-purchase anxiety for modular kit buyers
 ```
 
-### B2. Feature Screenshot Set
-
-Marketplace listings need a standard screenshot set. Reference what top sellers
-include:
-
-```
-SCREENSHOT 1 — Hero render:
-  [3/4 view, full asset, final textures, final lighting]
-  Reference: Top sellers in category
-
-SCREENSHOT 2 — Wireframe overlay:
-  [Shows topology quality — buyers inspect this to assess polygon efficiency]
-  How to capture: UE5 Wireframe view mode / Marmoset wireframe display
-  Reference: "game asset wireframe presentation ArtStation"
-
-SCREENSHOT 3 — Texture maps:
-  [Albedo / Normal / ORM displayed side by side]
-  Shows: Texture quality, resolution, and map organization
-  Reference: "PBR texture map presentation game asset"
-
-SCREENSHOT 4 — In-engine screenshot:
-  [Asset placed in a real scene context — NOT a grey void]
-  Why: Buyers need to see how it reads in an actual environment
-  Reference: "[asset type] UE5 in-scene screenshot ArtStation"
-
-SCREENSHOT 5 — LOD comparison (if applicable):
-  [Side-by-side LOD0 / LOD1 / LOD2 / LOD3]
-  Reference: "LOD comparison game asset screenshot"
-
-SCREENSHOT 6 — Scale reference:
-  [Asset next to UE5 mannequin or known reference object]
-  Critical: Buyers can't assess scale from the hero render alone
-
-SCREENSHOT 7 — Variant showcase (if asset has variants):
-  [All colour/damage/seasonal variants in one image]
-  Reference: "[category] variant showcase Fab ArtStation"
-```
-
-### B3. Product Listing Structure
-
-Research the product description format of top sellers before writing yours:
+### B3. Product Listing
 
 ```
 TITLE FORMULA:
-  [Style] [Asset Name] - [Engine] [Key Features]
-  Example: "Post-Apocalyptic Cargo Crate – UE5 | 4K PBR | 3 LODs | Collisions"
-  
+  [Style] [Asset Name] — [Engine] | [Key Spec 1] | [Key Spec 2] | [Key Spec 3]
+  Example: "Post-Apocalyptic Cargo Crate — UE5 | 4K PBR | 3 LODs | Collisions"
   Rules:
-  - Lead with the style adjective buyers search for
+  - Lead with style adjective (buyers search by style)
   - Include engine name (buyers filter by engine)
-  - List the 2–3 features that differentiate you from competitors
+  - List 2–3 specs that differentiate from competitors
   - Keep under 80 characters (truncates in marketplace grid)
 
-TAG STRATEGY (research-first):
-  Category tags:     [e.g. "prop", "environment", "hard surface"]
-  Style tags:        [e.g. "sci-fi", "post-apocalyptic", "realistic"]
-  Engine tags:       [e.g. "unreal-engine-5", "unity", "blender"]
-  Technique tags:    [e.g. "pbr", "4k", "game-ready", "modular"]
-  [Research: what tags do the top 5 similar assets in your category use?]
+TAG STRATEGY:
+  Category tags:  [prop / environment / character / etc.]
+  Style tags:     [sci-fi / post-apocalyptic / realistic / etc.]
+  Engine tags:    [unreal-engine-5 / unity / blender / etc.]
+  Technical tags: [pbr / 4k / lod / game-ready / modular / etc.]
+  Research: what tags do the top 5 similar assets use?
 
-DESCRIPTION SECTIONS (in order):
-  1. One-sentence hook — what is this, why is it production-ready
-  2. Technical specifications (poly count, texture res, LODs, maps included)
-  3. What's included (exact file list: FBX / OBJ / Blend / .uasset / textures)
-  4. Use case examples (types of scenes/games this fits)
+DESCRIPTION STRUCTURE:
+  1. One-sentence hook — what is it, why is it production-ready
+  2. Technical specifications (exact numbers — buyers scan for these)
+  3. What's included (exact file list)
+  4. Use case examples
   5. Engine version compatibility
   6. Support statement
 
 PRICING RESEARCH:
-  [Search 10 similar assets in your category]
-  Budget tier:      $[range] — [what assets at this price typically include]
-  Mid tier:         $[range] — [what assets at this price typically include]
-  Premium tier:     $[range] — [what premium assets include that justify the price]
-  Your price:       $[recommendation based on your feature set]
-  Rationale:        [why this price vs competitors]
+  Search 10 similar assets. Document:
+  Budget tier:    $[range] — [what this tier typically includes]
+  Mid tier:       $[range] — [the market sweet spot]
+  Premium tier:   $[range] — [what justifies premium pricing]
+  Your price:     $[recommendation]
+  Rationale:      [why this price vs competitors]
+
+BUNDLE STRATEGY:
+  Could this asset be bundled with others you own or will build?
+  Bundles convert at 2–3× single-asset rates on Fab.
+  Bundle options: [list 2–3 logical bundle combinations]
+  Bundle pricing: typically 30–40% discount vs individual prices
 ```
 
 ### B4. Competitor Gap Analysis
 
 ```
-MARKET RESEARCH QUERIES:
-  1. "[category] [style] site:fab.com" — find top 10 competitors
-  2. Sort by "Most Sold" — identify what the market wants
-  3. Read reviews of top sellers — what do buyers complain is missing?
-  4. Read reviews of similar assets with low ratings — what went wrong?
+MARKET RESEARCH:
+  1. Search "[category] [style]" on target marketplace
+  2. Sort by "Most Sold" or "Top Rated"
+  3. Read ALL reviews on top 5 sellers — what do buyers complain is missing?
+  4. Read reviews on low-rated similar assets — what failed?
 
-YOUR DIFFERENTIATOR:
-  [What does your asset have or do that the top sellers don't?]
-  [Be specific — "better topology" is not a differentiator. "Includes 4 damage
-   variants that no similar asset offers" is.]
+YOUR DIFFERENTIATOR (one sentence):
+  "The only [category] [style] with [specific feature] — directly addresses
+   the #1 buyer complaint in this category."
 
-TIMING CONSIDERATION:
-  [Is this category saturated? Is there a seasonal window? Is there an upcoming
-   game release that will spike search for this asset type?]
+TIMING:
+  Is this category saturated? Seasonal opportunity? Upcoming game release
+  that will spike search for this asset type?
+  [research and document]
 ```
 
 ---
@@ -252,7 +238,5 @@ TIMING CONSIDERATION:
 Save as `marketplace-brief_[assetname]_v1.md`.
 
 Part A is your modeling guide. Part B is your launch checklist.
-Revisit Part B before final render — the marketing research often reveals that
+Return to Part B before final renders — marketing research often reveals that
 the hero angle or feature set needs adjustment before screenshots are taken.
-
-This document should be the last thing you look at before hitting Publish.

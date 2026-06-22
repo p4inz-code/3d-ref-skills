@@ -79,11 +79,13 @@ be saved?]
 
 ## Example ideas we'd love to see
 
+> `ref-character` and `ref-hardsurface` were community-requested and shipped in v3.0.0.
+> See them in `skills/ref-character/` and `skills/ref-hardsurface/` as examples of what a completed skill looks like.
+
 | Skill idea | What it would cover |
 |------------|-------------------|
-| `ref-character` | Deep-dive character reference: anatomy, costume, facial topology, rig-ready deformation zones |
-| `ref-archviz` | Architecture and interior visualization: material sourcing, lighting reference, client presentation |
-| `ref-hardsurface` | Hard surface specialist: panel line systems, greebling reference, industrial design study |
+| `ref-archviz` | Architecture and interior visualization: building material reference, human scale anchors, lighting reference for interior/exterior, client presentation reference for non-artist approval |
+
 | `ref-concept` | Concept-to-3D pipeline: translating a 2D concept into a buildable reference brief |
 | `ref-vehicle` | Vehicle-specific: orthographic blueprint sourcing, mechanical reference, LOD strategy for large assets |
 | `ref-creature` | Creature and monster design: anatomy departure rules, surface variation, deformation priority zones |

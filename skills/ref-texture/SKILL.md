@@ -7,7 +7,7 @@ description: >
   "PBR material brief", "tiling texture reference", "trim sheet reference",
   "I need references before I start texturing". Works with Substance Designer,
   Substance Painter, Photoshop, Mari, Quixel, Materialize, and Fab texture packs.
-version: 2.1.0
+version: 3.0.0
 author: PainZ (github.com/p4inz-code)
 license: MIT
 ---
@@ -378,3 +378,118 @@ Save as `ref-texture_[materialname]_v1.md` in the texture project folder.
 Update after first texturing pass — you will discover missing reference in the
 micro layer almost immediately. This is normal. Re-gather and re-audit before
 moving to channel finalization.
+
+---
+
+## Extended Material Type Guides
+
+### Fabric and Cloth
+
+Fabric has completely different macro/meso/micro logic from hard surfaces:
+
+**Macro reference:**
+- Overall drape behavior: how does this fabric hang under gravity?
+  (heavy/stiff = fewer folds, tight angles | light/soft = many folds, flowing curves)
+- Fabric category: woven (structured grid) / knit (looped) / non-woven (felt, leather)
+- Search: "[fabric type] drape photography reference"
+
+**Meso reference:**
+- Weave pattern: the structural grid of the fabric at 10–30cm distance
+- Thread count visibility: fine weave (high TC) vs coarse weave (visible threads)
+- Seam and stitch reference: how seams sit on this fabric type
+- Search: "[fabric type] weave pattern close-up macro"
+
+**Micro reference:**
+- Individual fiber texture: loose fibers at edges, fabric pilling on worn zones
+- Sheen direction: fabric sheen shifts with viewing angle (anisotropic sheen)
+- Compression zones: fabric bunches differently than it stretches
+- Search: "[fabric type] fiber texture macro photography"
+
+**PBR notes for fabric:**
+- Roughness: 0.80–0.95 for most fabrics (very rough — fabric absorbs light)
+- Metallic: always 0 (fabric is non-metallic)
+- Sheen: use a sheen/cloth shader if available — standard metallic-roughness
+  underpresents fabric's anisotropic light behavior
+- Normal: fabric normals should show weave structure, not just bumps
+
+---
+
+### Skin and Organic Surfaces
+
+Skin is the hardest surface to texture convincingly. It requires SSS (subsurface
+scattering) awareness in reference gathering:
+
+**Macro reference:**
+- Skin tone range: the full gradient from highlight to shadow on this character's skin
+- Undertone: warm (yellow/red) / cool (blue/pink) / neutral — affects the entire palette
+- SSS zones: where light transmits through the skin (ears, nose tip, fingers, eyelids)
+- Search: "skin tone photography reference [ethnicity/tone]"
+
+**Meso reference:**
+- Pore distribution: larger pores on nose and forehead, finer on cheeks and neck
+- Skin texture variation: oily zones (T-zone) vs dry zones vs aged zones
+- Vascular patterns: veins visible at wrists, temples, backs of hands
+- Search: "skin pore texture macro photography", "skin texture close-up reference"
+
+**Micro reference:**
+- Fine line network: skin has a fine wrinkle network even on young, smooth skin
+- Surface sheen: skin has a complex multi-layer sheen — not simply rough or smooth
+- Age indicators: lines concentrate at expression zones (eyes, mouth, forehead)
+- Search: "skin micro texture photography close-up", "skin pore macro reference"
+
+**PBR notes for skin:**
+- Albedo: warm mid-tone — linear 0.25–0.45 for most skin tones (varies widely)
+- Roughness: 0.5–0.7 base, lower at oily zones (0.3–0.4), higher at dry zones
+- SSS: subsurface color is typically warmer/redder than surface color
+- If no SSS shader available: fake with warm color in shadow zones of albedo
+
+---
+
+### Trim Sheets
+
+Trim sheets are a single texture atlas containing multiple material strips
+used across many meshes — common in environment art:
+
+**Trim sheet reference gathering:**
+
+```
+TRIM SHEET PLANNING REFERENCE:
+  Study 5 existing trim sheets from top environment artists on ArtStation.
+  For each, identify:
+  - How many distinct strips? (typically 8–16 per sheet)
+  - What surface types are represented? (concrete edge, metal trim, wood plank, etc.)
+  - How is the sheet organized? (by material type / by use case / by detail level)
+  - What resolution is standard for this game type? (2K / 4K)
+
+STRIP REFERENCE:
+  For each planned strip, gather:
+  - Real-world macro photography of that surface type
+  - At least 2 examples of other artists' interpretation of the same material
+  - Edge transition reference (how does this strip blend into the next?)
+
+PROJECTION REFERENCE:
+  Trim sheets are applied via box/planar projection.
+  Gather reference for how the material reads from different projection angles:
+  - Front projection (flat surfaces)
+  - Side projection (perpendicular surfaces)
+  - Top projection (horizontal surfaces)
+  The same trim sheet strip must read correctly from all three.
+```
+
+---
+
+## Updated Pre-Texturing Checklist
+
+- [ ] Macro gathered — overall color, value, saturation documented
+- [ ] Meso gathered — structural patterns and construction logic understood
+- [ ] Micro gathered — surface texture, porosity, imperfection logic clear
+- [ ] PBR albedo range calibrated against real-world values
+- [ ] Roughness zones documented with expected value ranges
+- [ ] Metallic value confirmed (0 or 1 for most materials)
+- [ ] Fabric: weave pattern and sheen direction referenced (if applicable)
+- [ ] Skin: SSS zones identified and color temperature noted (if applicable)
+- [ ] Trim sheet: strip reference gathered per strip type (if applicable)
+- [ ] Tiling strategy planned (if tiling texture)
+- [ ] Imperfection logic documented — physical rules, not random placement
+- [ ] Competitor/marketplace research done (if for Fab)
+- [ ] I can describe this material's micro-surface without looking at reference

@@ -1,41 +1,39 @@
-# Open Issues — v2.1.0
-
-Known gaps and planned improvements for the next release.
+# Open Issues — 3d-ref-skills
 
 ---
 
-## Priority 1 — Fix Before Wide Distribution
+## [Current — v3.0.0]
 
 ### Issue 1 — Install command not verified
 `claude skill add p4inz-code/3d-ref-skills` listed in README but not confirmed
-indexed in Claude Code skill registry.
-Action: Verify after GitHub push. Update README if manual install is required.
-
----
-
-## Priority 2 — Add in v2.1.1
+indexed in Claude Code skill registry. If this fails, the primary install path
+in the README is broken for the largest potential user base.
+Action: Test the command after push. Update README if manual install must be primary.
 
 ### Issue 2 — No GitHub issue templates
 Visitors who want to report problems or propose skills have no guided path.
-Action: Add `.github/ISSUE_TEMPLATE/bug_report.md` and `new_skill_proposal.md`
+Status: RESOLVED in v3.1.0 — templates added
 
-### Issue 3 — Planning documents at root level
-RESEARCH_REPORT.md, FIVE_WHYS_ANALYSIS.md, V2_STRUCTURE.md are planning artifacts
-visible at root. Valuable for contributors; potentially confusing for casual visitors.
-Action: Move to `docs/meta/` in v3.0
+### Issue 3 — docs/VFX_REFERENCE_WORKFLOW.md not yet written
+Planned in roadmap. Standalone VFX reference guide for non-AI users.
+Action: Write for v3.1 or community contribution.
+
+### Issue 4 — docs/TEXTURE_REFERENCE_WORKFLOW.md not yet written
+Planned in roadmap. Standalone texture reference guide for non-AI users.
+Action: Write for v3.1 or community contribution.
+
+### Issue 5 — ref-brief has only one example (hard surface prop)
+Second example for organic/character asset type would demonstrate skill range.
+Action: Add for v3.1 or invite community contribution.
 
 ---
 
-## Priority 3 — Add in v3.0
+## [Resolved in v3.0.0]
 
-### Issue 4 — Missing standalone workflow guides
-`docs/VFX_REFERENCE_WORKFLOW.md` and `docs/TEXTURE_REFERENCE_WORKFLOW.md` planned but
-not yet written. Both are noted in CHANGELOG and roadmap.
-
-### Issue 5 — ref-character not yet built
-Character reference deep-dive is the highest-requested missing skill category.
-Action: v3.0 — `ref-character` covering anatomy, facial topology, deformation zones.
-
-### Issue 6 — Second examples not yet added
-Each skill has one example. Two examples would demonstrate range.
-Action: v3.0 — add one organic / character example to ref-brief.
+~~Issue: ref-character not yet built~~ — Shipped in v3.0.0
+~~Issue: ref-hardsurface not yet built~~ — Shipped in v3.0.0
+~~Issue: Second examples not yet added for v2 skills~~ — All 9 skills now have examples
+~~Issue: Author strings incorrect~~ — All corrected to p4inz-code
+~~Issue: Version badge mismatch~~ — Fixed in v3.1.0
+~~Issue: Seven/Nine skill count mismatch in README~~ — Fixed in v3.1.0
+~~Issue: Planning docs at root cluttering first impression~~ — Moved to docs/meta/ in v3.1.0

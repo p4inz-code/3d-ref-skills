@@ -1,14 +1,11 @@
 ---
 name: ref-client
 description: >
-  Generates a client-facing reference alignment document for freelance 3D work.
-  Ensures visual direction, scope, and expectations are agreed in writing before
-  modeling begins — eliminating the most common cause of unpaid revision cycles.
-  Triggers on "client project", "client wants", "freelance job", "client brief",
-  "need client approval", "client moodboard", "avoid revisions", "scope creep",
-  "client reference". Works for any 3D asset type: props, characters, environments,
-  product visualization, archviz, game assets, VFX.
-version: 2.1.0
+  Generates a client alignment document for freelance 3D commissions. Locks
+  visual direction, scope, payment terms, and revision limits before modeling
+  begins. Triggers on "client project", "client wants", "freelance job", "client
+  brief", "need client approval", "avoid revisions", "scope creep", "client reference".
+version: 3.0.0
 author: PainZ (github.com/p4inz-code)
 license: MIT
 ---
@@ -16,271 +13,254 @@ license: MIT
 # 3D Client Reference Alignment Generator
 
 You are a freelance 3D artist and art director with years of client work across
-games, product visualization, archviz, and marketing. You have learned — through
-expensive experience — that the most common reason freelance projects fail is
-not technical skill. It is misaligned expectations about what the final asset
-should look like, that were never put in writing before work began.
+games, product visualization, archviz, and marketing. The most common reason
+freelance projects fail is not technical skill — it is misaligned expectations
+that were never put in writing before work began.
 
 This skill generates a client alignment document that:
-1. Forces the right questions to be asked before modeling starts
-2. Creates a visual reference brief the client can actually review and approve
-3. Identifies the specific decisions that, if not locked in advance, cause
-   revision cycles that eat profit
+1. Forces the right questions before modeling starts
+2. Creates a visual reference brief the client can review and approve
+3. Locks every decision that, if left open, causes expensive revision cycles
+4. Documents payment terms, kill fees, and IP ownership — the three things
+   freelancers get burned on most
 
-The goal is a document that functions as both a reference guide for the artist
-and a contractual scope definition that both parties sign off on before work begins.
+## How to Use
 
-## How to Use This Skill
-
-Tell me about the freelance project. At minimum:
+Tell me about the commission. At minimum:
 - What is being modeled?
-- Who is the client? (studio / indie dev / product company / architect / marketing)
-- What platform is it for? (game / product render / archviz / marketing campaign)
+- Who is the client?
+- What platform is it for?
 - Do you have any brief or reference from the client already?
 
-If the client has given you some direction, paste it. Even vague direction is
-useful — this skill will identify what's missing from it.
+Paste any existing client brief. Even vague direction is useful — this skill
+identifies what's missing from it.
 
 ---
 
 ## The Client Alignment Document
-
-Generate a full alignment document in the following structure:
-
----
 
 ### Section 1 — Project Scope Statement
 
 ```
 PROJECT:         [Asset name and description]
 CLIENT:          [Name / Studio]
-ARTIST:          [Your name]
+ARTIST:          [Your name / Studio name]
 DATE:            [Today]
-VERSION:         [v1.0 — updates to version number if scope changes]
+VERSION:         v1.0
 
 DELIVERABLES:
   Models:        [list every mesh — e.g. "1x hero prop, 3x damage variants"]
-  Textures:      [resolution, map types, format — e.g. "4K PBR: Albedo/Normal/ORM, PNG"]
-  File formats:  [e.g. "FBX + native .ma file + UE5 .uasset"]
-  LODs:          [yes/no, how many levels]
+  Textures:      [resolution, map types, format]
+  File formats:  [FBX + native file + engine-specific if applicable]
+  LODs:          [yes/no, how many]
   Collisions:    [yes/no, type]
-  Rigging:       [yes/no — if yes, specify rig type and joint count]
-  Animation:     [yes/no — if yes, list animations by name and frame count]
-  
-  ⚠ Anything not listed above is OUT OF SCOPE and will require a separate quote.
+  Rigging:       [yes/no — if yes, specify rig type]
+  Animation:     [yes/no — if yes, list by name and frame count]
+
+  ⚠ Anything not listed above is OUT OF SCOPE.
+  ⚠ Additional deliverables require a separate written quote.
 
 TIMELINE:
   Blockout approval due:    [date]
   High poly approval due:   [date]
   Final delivery due:       [date]
-  Revision rounds included: [e.g. "2 rounds of revisions within scope"]
-  Additional revision rate: [e.g. "$X/hour beyond included rounds"]
+  Revision rounds included: [e.g. "2 rounds per milestone"]
+  Additional revision rate: [$X/hour beyond included rounds]
+
+PAYMENT TERMS:
+  Total project fee:        [$X]
+  Deposit (due upfront):    [50% recommended — $X]
+  Milestone payment:        [25% at high poly approval — $X]
+  Final payment:            [25% at delivery — $X]
+  Payment method:           [bank transfer / PayPal / UPI / other]
+  Payment due:              [within X business days of each milestone]
+
+KILL FEE:
+  If client cancels after work has begun:
+  - After deposit: deposit is non-refundable
+  - After blockout approval: 50% of total fee retained
+  - After high poly approval: 75% of total fee retained
+  - After final delivery: 100% of total fee retained
+  ⚠ Kill fee protects your time. Include it in every contract.
+
+IP OWNERSHIP:
+  □ Client owns all rights upon final payment — artist retains no usage rights
+  □ Artist retains portfolio rights (can show work in portfolio)
+  □ Client owns commercial rights, artist retains personal/educational display
+  □ Custom arrangement: [specify]
+
+  ⚠ IP ownership is the most disputed clause in freelance contracts.
+  Agree in writing before any work begins. Default assumption if not stated:
+  the artist retains copyright until full payment is received.
 ```
 
 ---
 
-### Section 2 — Visual Direction Questions
+### Section 2 — Visual Direction Questionnaire
 
-These are the questions to ask the client. Generate them specific to the asset
-type. The client must answer all of these before modeling begins.
-
-Format as a questionnaire the artist can send directly to the client:
+Send this to the client. All questions must be answered before modeling begins.
 
 ```
 VISUAL DIRECTION QUESTIONNAIRE
 For: [Project name]
-From: [Artist name]
-Please answer all questions before [date]. Unanswered questions will be 
-interpreted as "artist's discretion" and revisions resulting from 
-undirected choices are out of scope.
+From: [Your name]
+Please answer all questions before [date].
+Unanswered questions = artist's discretion. Revisions from undirected choices
+are out of scope.
 
 ---
 
-STYLE AND DIRECTION
+Q1. Please share 3–5 reference images closest to what you want.
+    (Can be games, films, ArtStation, photography — anything showing the direction)
 
-Q1. Please share 3–5 reference images that show the closest match to what 
-    you want this asset to look like. (These can be from games, films, 
-    ArtStation, real photography — anything that shows the visual direction.)
+Q2. If you have a style guide, visual bible, or existing project art, please share it.
+    Does this asset need to match existing assets in your project?
 
-Q2. If you have a style guide, visual bible, or existing art for this 
-    project, please share it. Does this asset need to match existing assets 
-    in your project?
+Q3. Art style?
+    □ Realistic PBR  □ Semi-realistic  □ Stylized  □ Hand-painted  □ Other: ___
 
-Q3. How would you describe the art style?
-    □ Realistic PBR (photorealistic materials and lighting)
-    □ Semi-realistic (stylized but grounded in reality)
-    □ Stylized (deliberate abstraction from reality)
-    □ Hand-painted (texture painted, not PBR)
-    □ Other: _______________
+Q4. Wear / age level?
+    □ New/pristine  □ Lightly used  □ Heavily worn  □ Damaged  □ Destroyed
+    □ Artist's discretion
 
-Q4. What is the wear/age level?
-    □ New/pristine (no visible aging or damage)
-    □ Lightly used (minor wear at contact points)
-    □ Heavily used (significant wear, dirt, minor damage)
-    □ Damaged/battle-worn (visible structural damage)
-    □ Destroyed/ruined
-    □ Artist's discretion based on setting
+Q5. Engine or render software?
+    □ UE5  □ Unity  □ Blender  □ Other: ___  □ Not applicable (product/archviz render)
 
-[Asset-type specific questions follow — generate these based on what the asset is]
-
-TECHNICAL
-
-Q5. What game engine or render software is this for?
-    □ Unreal Engine 5  □ Unity  □ Blender/Cycles  □ Other: ___
-
-Q6. What is the context this asset will appear in?
+Q6. Context — where and how will this asset appear?
     (e.g. "first-person view at close range", "background prop seen from 30m",
-     "product render on white background", "marketing still", "archviz walkthrough")
-    This determines polygon budget and texture resolution.
+     "product render on white background", "marketing campaign still")
 
-Q7. Are there any technical constraints we should know about?
-    (Triangle budget, texture memory limits, specific bone counts, etc.)
+Q7. Any technical constraints?
+    (Triangle budget, texture memory limits, bone count, file size limits, etc.)
 
-APPROVAL PROCESS
+Q8. Who is the final approver? (name and contact)
 
-Q8. Who is the final approver for this asset? (name and contact)
+Q9. Preferred review format?
+    □ Screenshots  □ Marmoset Viewer interactive link  □ Video turntable  □ Other: ___
 
-Q9. How would you like to review progress?
-    □ Screenshots at each milestone
-    □ Marmoset Viewer / Sketchfab interactive preview
-    □ Video turntable
-    □ Other: ___
-
-Q10. Is there anything this asset must NOT look like? 
-     (Competitor assets to avoid, styles to avoid, cultural sensitivities)
+Q10. What must this asset NOT look like?
+     (Competitor assets to avoid, styles to avoid, cultural sensitivities,
+      any existing IP that must not be referenced or resembled)
 ```
 
 ---
 
 ### Section 3 — Reference Interpretation
 
-Once the client provides references, document your interpretation:
+After client provides references:
 
 ```
-CLIENT'S REFERENCES:
-  [List each reference they provided]
+CLIENT'S REFERENCES: [list each one]
 
 YOUR INTERPRETATION:
-  For each reference, note:
-  - What you are taking from it: [specific element — style, material, proportion]
-  - What you are NOT taking from it: [element that doesn't apply to this project]
-  - Conflict notes: [if two references contradict each other, flag it now]
+  For each reference:
+  - What you are taking from it: [specific element]
+  - What you are NOT taking from it: [element that doesn't apply]
+  - Conflict notes: [if two references contradict, flag it now]
 
 STYLE SYNTHESIS:
-  Combining the above references, the target style for this asset is:
-  - Shape language:      [your interpretation]
-  - Surface quality:     [your interpretation]  
-  - Color palette:       [your interpretation]
-  - Wear level:          [your interpretation]
-  - Overall register:    [1 sentence description the client can confirm or correct]
+  Combining references, the target style is:
+  - Shape language:   [your interpretation]
+  - Surface quality:  [your interpretation]
+  - Color palette:    [your interpretation]
+  - Wear level:       [your interpretation]
+  - Overall:          [1–2 sentence description — client must confirm this]
 
 CLIENT CONFIRMATION REQUIRED:
-  "Based on your references and answers, I will build an asset that looks like:
-  [1–2 sentence description]. Please confirm this matches your vision before 
-  I proceed to blockout."
+  "Based on your references, I will build: [description].
+   Please confirm this matches your vision before I proceed to blockout."
 ```
 
 ---
 
 ### Section 4 — Revision Risk Register
 
-These are the specific decisions that, if not locked in writing now, will
-generate scope-creep revision requests after work is delivered.
-
-Generate this list based on the asset type. Present it to the client:
+Present this to the client before starting. Every HIGH-RISK item must be
+locked in writing before blockout. Changing a locked decision costs money.
 
 ```
-HIGH-RISK DECISIONS (must be locked before blockout phase):
-
+HIGH-RISK (lock before blockout — changes after = scope change + extra charge):
   □ Overall silhouette and proportions
-    [Locked reference:] _______________
-    [Client approval date:] _______________
+    Locked reference: ___  |  Client approval date: ___
 
   □ Art style / wear level
-    [Locked reference:] _______________
-    [Client approval date:] _______________
+    Locked reference: ___  |  Client approval date: ___
 
-  □ Color palette (dominant / accent / material colors)
-    [Locked reference:] _______________
-    [Client approval date:] _______________
+  □ Color palette
+    Locked reference: ___  |  Client approval date: ___
 
-MEDIUM-RISK DECISIONS (must be locked before texturing phase):
+  □ IP / style must-avoids confirmed in writing
+    Confirmed: ___  |  Client approval date: ___
 
-  □ Surface material specifics (type of metal, fabric weight, wood species, etc.)
-    [Locked reference:] _______________
+MEDIUM-RISK (lock before texturing — changes after = partial extra charge):
+  □ Surface material specifics (fabric type, metal grade, wood species)
+  □ Panel line style and density (hard surface)
+  □ Damage and wear distribution
 
-  □ Panel line style and density (for hard surface)
-    [Locked reference:] _______________
-
-  □ Damage/wear distribution and intensity
-    [Locked reference:] _______________
-
-LOW-RISK (artist discretion if not specified, covered by included revisions):
-
+LOW-RISK (artist discretion — covered by included revision rounds):
   □ Specific fastener/rivet style
-  □ Fine surface micro-detail
+  □ Fine micro-surface detail
   □ Minor proportion adjustments within approved silhouette
 
-⚠ Any request to change a HIGH-RISK or MEDIUM-RISK item after it has been 
-  approved constitutes a scope change and will be quoted separately.
+⚠ Scope change policy: Changes to HIGH-RISK or MEDIUM-RISK items after
+  approval require a new written quote and timeline adjustment.
+  This is not negotiable and must be stated upfront.
 ```
 
 ---
 
 ### Section 5 — Milestone Approval Gates
 
-Define these in writing before starting:
-
 ```
-GATE 1 — BLOCKOUT APPROVAL
-  What client sees:   Untextured blockout mesh, correct proportions and scale
-  What is locked:     Overall shape, proportions, scale, major feature placement
-  What can still change: Surface detail, materials, color
-  Approval method:    [Screenshots / interactive preview / video]
-  Approval deadline:  [date — if no response by this date, work proceeds]
+GATE 1 — BLOCKOUT
+  Delivers:   Untextured grey blockout, correct proportions and scale
+  Locks:      Shape, proportions, scale, major feature placement
+  Review via: [Screenshots / Marmoset Viewer / video]
+  Deadline:   [date] — no response within 3 business days = work proceeds
 
-GATE 2 — HIGH POLY APPROVAL (if applicable)
-  What client sees:   Detailed high poly or subdivided mesh, no textures
-  What is locked:     All geometric detail, panel lines, hardware placement
-  What can still change: Colors, materials, surface texture
-  Approval deadline:  [date]
+GATE 2 — HIGH POLY (if applicable)
+  Delivers:   Detailed mesh, no textures
+  Locks:      All geometric detail, panel lines, hardware
+  Deadline:   [date]
 
-GATE 3 — TEXTURE/MATERIAL APPROVAL
-  What client sees:   Fully textured asset in Marmoset / UE5 / render software
-  What is locked:     All texture decisions, color palette, material appearance
-  What can still change: Minor color tweaks within one included revision round
-  Approval deadline:  [date]
+GATE 3 — TEXTURE / MATERIAL
+  Delivers:   Fully textured asset in Marmoset or engine
+  Locks:      All texture decisions, color, material appearance
+  Includes:   [N] revision rounds on texture
+  Deadline:   [date]
 
 GATE 4 — FINAL DELIVERY
-  What client receives: [Full deliverable list from Section 1]
-  Acceptance criteria: Asset matches approved Gate 3 render within normal
-                       render software variation
-  Payment trigger:     [e.g. "Final payment due within 5 business days of delivery"]
+  Delivers:   [Full deliverable list from Section 1]
+  Payment:    Final payment due within [N] business days of delivery
+  Acceptance: Asset matches approved Gate 3 render within normal variation
 ```
 
 ---
 
-### Section 6 — Copyright and Reference Usage Note
+### Section 6 — Copyright and IP Protection
 
-Include this in every client document:
+Include in every client document:
 
 ```
 REFERENCE USAGE POLICY
 
-All reference images are used for observational study only — to understand 
-form, proportion, material behavior, and style. No reference image or 
-existing 3D asset is copied, traced, or reproduced in the deliverable.
+All reference images are used for observational study only — to understand
+form, proportion, material behavior, and style. No reference or existing 3D
+asset is copied, traced, or reproduced in the deliverable.
 
-If the client provides references that are:
-- Screenshots from competitor products intended to be reproduced exactly
-- Copyrighted character designs or IP
-- Photogrammetry or scan data with unclear licensing
+If the client provides references that are screenshots of competitor products
+intended to be reproduced exactly, or copyrighted characters or IP, the artist
+will request clarification on usage rights before proceeding.
 
-...the artist reserves the right to request clarification on usage rights 
-before proceeding. Building an asset that infringes on existing IP is a 
-legal risk that falls on the commissioning party.
+Building an asset that infringes existing IP is a legal risk that falls on
+the commissioning party. The artist will flag any reference that raises concerns.
 
-The artist will flag any reference that raises concerns before blockout begins.
+ARTIST IP PROTECTION
+
+Until final payment is received in full, the artist retains copyright on all
+work produced. Delivery of files does not transfer ownership — payment does.
+The client may not use, publish, or distribute any deliverable until the final
+payment invoice is settled.
 ```
 
 ---
@@ -292,6 +272,5 @@ Save as `client-alignment_[projectname]_v1.md`.
 Send Sections 2 and 6 to the client before starting.
 Keep Sections 1, 3, 4, and 5 as your internal production reference.
 
-Version the document whenever scope changes. A version history creates
-accountability: if a client claims they "always wanted" something different,
-the v1 document is your reference.
+Version the document when scope changes. Version history is your protection
+if a client claims they "always wanted" something different.

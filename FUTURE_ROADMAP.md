@@ -10,10 +10,10 @@
 
 ---
 
-## v3.0.0 — Character and Specialist Release
+## v3.0.0 — Character and Specialist Release [RELEASED]
 
 New Skills:
-- [ ] `ref-character` — Character reference deep-dive
+- [x] `ref-character` — Character reference deep-dive **[COMPLETED — v3.0.0]**
   - Facial topology reference framework
   - Anatomy and structure reference (not just surface)
   - Deformation zone reference for rigged characters
@@ -26,7 +26,7 @@ New Skills:
   - Human scale reference for architecture
   - Client presentation reference
 
-- [ ] `ref-hardsurface` — Hard surface specialist
+- [x] `ref-hardsurface` — Hard surface specialist **[COMPLETED — v3.0.0]**
   - Panel line system reference
   - Greebling density and scale reference
   - Industrial design language reference
@@ -65,9 +65,9 @@ These skills will be built when contributors from those communities submit them:
 If you want to contribute a skill, see CONTRIBUTING.md.
 The highest-impact unbuilt skills in priority order:
 
-1. `ref-character` — Large community, high demand, ref-audit already has C1–C3 checks to build from
+~~1. `ref-character`~~ — **Shipped in v3.0.0**
 2. `ref-archviz` — Archviz community is active and underserved by AI tooling
-3. `ref-hardsurface` — Hard surface is the largest single category on Fab
+~~3. `ref-hardsurface`~~ — **Shipped in v3.0.0**
 
 ---
 
