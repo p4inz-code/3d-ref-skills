@@ -286,7 +286,7 @@ Full instructions in [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 **MIT · Free Forever · No account required**
 
-Made by [Atharva Patil](https://github.com/p4inz-code) — Northbyte Studios · Navi Mumbai, India
+Made by [Atharva Patil](https://github.com/p4inz-code) — P4inz Interactive Labs · Navi Mumbai, India
 
 *If this saved you from a bad reference board, a ⭐ helps other artists find it.*
 

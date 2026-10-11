@@ -9,7 +9,7 @@
 ```
 PROJECT:         Custom Sci-Fi Energy Pistol — "Volt-9" for Project: NEXUS
 CLIENT:          Indie Studio / Lead Dev: [Client Name]
-ARTIST:          Atharva Patil — Northbyte Studios (github.com/p4inz-code)
+ARTIST:          Atharva Patil — P4inz Interactive Labs (github.com/p4inz-code)
 DATE:            2026-06-20
 VERSION:         v1.0
 
@@ -49,7 +49,7 @@ TIMELINE:
 
 **VISUAL DIRECTION QUESTIONNAIRE**
 For: Volt-9 Sci-Fi Pistol — Project: NEXUS
-From: Atharva Patil — Northbyte Studios
+From: Atharva Patil — P4inz Interactive Labs
 Please answer all questions before [date].
 
 ---

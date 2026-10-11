@@ -153,4 +153,4 @@ Skipping layers is not faster. It is a debt paid at delivery.
 
 *Reference Engineering Checklist v2.1.0*
 *github.com/p4inz-code/3d-ref-skills — MIT License — Free Forever*
-*Made by Atharva Patil — Northbyte Studios*
+*Made by Atharva Patil — P4inz Interactive Labs*

@@ -34,7 +34,7 @@ PASS — ref-texture:       name, description, version, author, license — all 
 PASS — All author fields: PainZ (github.com/p4inz-code)
 PASS — All example footers: github.com/p4inz-code/3d-ref-skills
 PASS — README footer: github.com/p4inz-code
-PASS — LICENSE: Atharva Patil — Northbyte Studios
+PASS — LICENSE: Atharva Patil — P4inz Interactive Labs
 PASS — No instances of old github.com/painz string remain
 
 ## Internal Links Audit

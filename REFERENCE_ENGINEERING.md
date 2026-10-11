@@ -156,5 +156,5 @@ The skills automate the framework. The framework exists independently of the ski
 
 ---
 
-*Reference Engineering — coined and documented by Atharva Patil, Northbyte Studios, 2026.*
+*Reference Engineering — coined and documented by Atharva Patil, P4inz Interactive Labs, 2026.*
 *github.com/p4inz-code/3d-ref-skills — MIT License*
