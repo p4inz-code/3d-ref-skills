@@ -1,4 +1,4 @@
-# Final Repository Tree — v3.0.0
+# Final Repository Tree: v3.0.0
 
 ```
 3d-ref-skills/

@@ -1,7 +1,7 @@
 # Kanvaz + 3d-ref-skills Workflow
 
 [Kanvaz](https://github.com/p4inz-code/kanvaz) is a free, offline, infinite-canvas
-reference board application for 3D and VFX artists. It runs locally — no cloud,
+reference board application for 3D and VFX artists. It runs locally, no cloud,
 no telemetry, no subscription.
 
 These AI skills generate your reference brief. Kanvaz is where you build the board.
@@ -9,22 +9,22 @@ This document shows the complete workflow from start to finish.
 
 ---
 
-## The Two Tools
+## The two tools
 
 | Tool | Role |
 |------|------|
-| **3d-ref-skills** (this repo) | Tells you what references to gather and where to find them |
-| **[Kanvaz](https://github.com/p4inz-code/kanvaz)** | The canvas where you organize and study those references |
+| 3d-ref-skills (this repo) | Tells you what references to gather and where to find them |
+| [Kanvaz](https://github.com/p4inz-code/kanvaz) | The canvas where you organize and study those references |
 
 They are designed to work together. The skills produce structured briefs with
-labeled zones — Kanvaz provides labeled zones on an infinite canvas.
+labeled zones, Kanvaz provides labeled zones on an infinite canvas.
 The workflow locks together.
 
 ---
 
-## Complete Workflow — Step by Step
+## Complete workflow: step by step
 
-### Step 1 — Run ref-brief in Claude Code
+### Step 1: Run ref-brief in Claude Code
 
 Before opening Kanvaz, generate your reference brief:
 
@@ -45,7 +45,7 @@ Claude returns a full structured brief including:
 
 ---
 
-### Step 2 — Open Kanvaz and Create Zones
+### Step 2: open kanvaz and create zones
 
 Open Kanvaz and create a new board named `[AssetName]_refs_v1`.
 
@@ -65,50 +65,50 @@ Set up zones matching the brief's board layout:
 ```
 
 Label each zone. In Kanvaz, you can add text labels directly on the canvas.
-Use the brief's zone names exactly — this lets you quickly find references
+Use the brief's zone names exactly. This lets you quickly find references
 when modeling and you need to check a specific detail.
 
 ---
 
-### Step 3 — Gather Using the Brief's Queries
+### Step 3: gather using the brief's queries
 
 Open your browser alongside Kanvaz (side by side or on a second monitor).
 
 Work through the brief zone by zone, in order:
 
-**Zone 1 — Silhouette and Shape Language:**
+**Zone 1, Silhouette and Shape Language:**
 Use the 5 search queries from the brief. Sources: ArtStation, Pinterest, Google Images.
-Target: 8–15 images per zone.
+Target: 8-15 images per zone.
 Drag images directly from the browser into the Kanvaz zone.
 
-**Zone 2 — Orthographic Views:**
+**Zone 2, Orthographic Views:**
 Use the sources specified in the brief's orthographic checklist.
-Blueprints go here — clean, scaled, technical.
+Blueprints go here, clean, scaled, technical.
 Target: all available views found or acknowledged unavailable.
 
-**Zone 3 — Material Detail (one sub-zone per surface):**
+**Zone 3, Material Detail (one sub-zone per surface):**
 Use the per-surface search queries from the brief's material breakdown.
 Close-up macro photography only. No overview shots in this zone.
-Target: 8–12 images per surface type.
+Target: 8-12 images per surface type.
 
-**Zone 4 — Scale Anchors:**
+**Zone 4, Scale Anchors:**
 The reference object from the brief's scale anchor section.
 A photo of the scale anchor object (human figure, door, vehicle)
 placed next to the asset in a real-world photo if possible.
 
-**Zone 5 — Detail Zones:**
+**Zone 5, Detail Zones:**
 Use the search queries from the brief's detail focus zones.
-These are macro close-ups — individual fasteners, seams, surface grain.
-Target: 6–10 images per detail zone.
+These are macro close-ups: individual fasteners, seams, surface grain.
+Target: 6-10 images per detail zone.
 
-**Zone 6 — Lighting and Render Mood:**
+**Zone 6, Lighting and Render Mood:**
 The render and lighting reference from the brief's lighting section.
 Images showing similar assets under the target light setup.
-Target: 8–12 images.
+Target: 8-12 images.
 
 ---
 
-### Step 4 — Run ref-audit Before Opening DCC
+### Step 4: Run ref-audit Before Opening DCC
 
 When the board is built, run the audit before touching your DCC:
 
@@ -128,7 +128,7 @@ Acknowledge the rest and note where in the production process you'll address the
 
 ---
 
-### Step 5 — Model with Kanvaz Alongside Your DCC
+### Step 5: model with kanvaz alongside your DCC
 
 Open Kanvaz on one monitor. Open Maya, Blender, or your DCC on the other.
 
@@ -143,7 +143,7 @@ without reference, stop, find the reference, add it to Kanvaz, continue.
 
 ---
 
-### Step 6 — Re-Audit at Blockout Completion
+### Step 6: re-audit at blockout completion
 
 When blockout is complete, run ref-audit again:
 
@@ -152,13 +152,13 @@ When blockout is complete, run ref-audit again:
  The board has [describe current state]. What's missing before I go to detail?"
 ```
 
-This second audit catches gaps that weren't obvious before modeling started —
+This second audit catches gaps that weren't obvious before modeling started
 edge bevel reference, specific fastener type, how a particular material transition
 should look. These gaps are normal and expected. Address them before detailing begins.
 
 ---
 
-### Step 7 — Delivery (Marketplace or Client)
+### Step 7: delivery (marketplace or client)
 
 **For marketplace assets:**
 ```
@@ -177,12 +177,12 @@ Populate it with the marketing reference from the ref-marketplace brief:
 "Generate a ref-client document for this commission. Client wants: [brief]."
 ```
 
-The ref-client output is a document to send to the client — not a Kanvaz zone.
+The ref-client output is a document to send to the client. Not a Kanvaz zone.
 Save it as `client-alignment_[projectname]_v1.md` and send Section 2 to the client.
 
 ---
 
-## Kanvaz Tips for Reference Engineering
+## Kanvaz tips for reference engineering
 
 **Name your boards with version numbers:**
 `CargoCrate_refs_v1` → `CargoCrate_refs_v2` (after blockout re-audit)
@@ -190,7 +190,7 @@ This preserves your reference history and shows your process if you're building 
 
 **Use Kanvaz's infinite canvas for zone expansion:**
 If a material zone grows beyond 15 images, give it more horizontal space.
-Some complex assets need large material zones — the canvas handles this.
+Some complex assets need large material zones. The canvas handles this.
 
 **Keep the board open during texturing:**
 The material and detail zones are equally valuable during texturing as during modeling.
@@ -198,11 +198,11 @@ Don't close the board when you move to Substance Painter or your texturing tool.
 
 **Screenshot your final Kanvaz board:**
 A screenshot of a well-organized reference board is portfolio content.
-It demonstrates professional pre-production process — exactly what studios look for.
+It demonstrates professional pre-production process, exactly what studios look for.
 
 ---
 
-## Quick Start
+## Quick start
 
 1. Install Kanvaz: [github.com/p4inz-code/kanvaz](https://github.com/p4inz-code/kanvaz)
 2. Install 3d-ref-skills: `claude skill add p4inz-code/3d-ref-skills`
@@ -215,4 +215,4 @@ That's the workflow. Start with one asset. The system becomes habit.
 *Kanvaz Workflow v2.1.0*
 *3d-ref-skills: github.com/p4inz-code/3d-ref-skills*
 *Kanvaz: github.com/p4inz-code/kanvaz*
-*MIT License — Free Forever*
+*MIT License, Free Forever*

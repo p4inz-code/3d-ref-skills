@@ -1,7 +1,7 @@
-# The Reference Pyramid
+# The reference pyramid
 
 The Reference Pyramid is the core framework of Reference Engineering.
-It defines the order in which references must be gathered — and why that order matters.
+It defines the order in which references must be gathered. And why that order matters.
 
 ```
                               ╔═══════════╗
@@ -43,7 +43,7 @@ It defines the order in which references must be gathered — and why that order
 
 ---
 
-## Layer 1 — Concept (Foundation)
+## Layer 1: concept (foundation)
 
 **What it is:** The definition of the asset before any reference gathering begins.
 
@@ -64,19 +64,19 @@ and discover this only after modeling is complete.
 
 ---
 
-## Layer 2 — Silhouette
+## Layer 2: silhouette
 
 **What it is:** Shape and proportion reference showing what the asset looks like at distance.
 
 **What you gather:**
-- The 2–3 primary forms that make up the silhouette
+- The 2-3 primary forms that make up the silhouette
 - How the asset reads as a black shape at thumbnail size
 - The proportion ratio (tall vs wide, heavy vs light)
 - The shape rhythm (does a form repeat at multiple scales?)
 
 **Why it comes before orthographic:**
 You must understand the overall shape before you look at the technical specifics.
-Orthographic blueprints lock in proportions — those proportions must be the right ones.
+Orthographic blueprints lock in proportions. Those proportions must be the right ones.
 Gather silhouette reference first so you know what proportions you're committing to.
 
 **If you skip this layer:**
@@ -85,7 +85,7 @@ that don't match the visual direction of your project. Technically correct. Visu
 
 ---
 
-## Layer 3 — Orthographic
+## Layer 3: orthographic
 
 **What it is:** Technical front/side/top views, blueprints, or measured drawings.
 
@@ -107,7 +107,7 @@ This error compounds through the entire build and is almost impossible to fix af
 
 ---
 
-## Layer 4 — Scale
+## Layer 4: scale
 
 **What it is:** Real-world dimensional reference establishing the physical size of the asset.
 
@@ -127,12 +127,12 @@ the #1 reason assets fail QA and the hardest problem to fix after production is 
 
 ---
 
-## Layer 5 — Material
+## Layer 5: material
 
 **What it is:** Close-up photography and reference for each distinct surface type on the asset.
 
 **What you gather:**
-- Separate reference cluster per material (concrete, metal, rubber, paint — each separately)
+- Separate reference cluster per material (concrete, metal, rubber, paint. Each separately)
 - The physical logic of aging and wear for each material type
 - PBR value calibration reference (albedo range, roughness behavior, metallic zones)
 - The rules governing where wear concentrates and how it distributes
@@ -143,23 +143,23 @@ which is determined by scale. A 1m prop at 512px/m needs different macro detail 
 than a 5m prop at the same density.
 
 **If you skip this layer:**
-Surfaces that look "3D" — technically correct but unconvincing. The micro-variation,
+Surfaces that look "3D", technically correct but unconvincing. The micro-variation,
 wear logic, and PBR calibration that make surfaces read as physically real are all in this layer.
 
 ---
 
-## Layer 6 — Detail
+## Layer 6: detail
 
 **What it is:** Macro-level close-up photography of the specific features that give the asset its character.
 
 **What you gather:**
-- Individual fasteners, seams, panel lines — close enough to count individual threads
+- Individual fasteners, seams, panel lines, close enough to count individual threads
 - Surface micro-texture at 1:1 with the model's texel density
 - The areas that will receive the most visual attention in the hero angle
 - Secondary details that add reading complexity at medium distance
 
 **Why it comes after material:**
-Detail reference is the most specific reference type — it narrows to individual elements.
+Detail reference is the most specific reference type. It narrows to individual elements.
 You cannot correctly reference details without first understanding the material those
 details exist within, and the scale at which they need to read.
 
@@ -169,9 +169,9 @@ Surface detail that reads as pattern-stamped rather than physically motivated.
 
 ---
 
-## Layer 7 — Deliver
+## Layer 7: deliver
 
-**What it is:** Reference for how the asset will be presented — render angle, lighting, marketing.
+**What it is:** Reference for how the asset will be presented: render angle, lighting, marketing.
 
 **What you gather:**
 - The hero presentation angle (3/4 view, top-down, eye-level)
@@ -190,19 +190,19 @@ made at the end of production that contradict the modeling and texturing decisio
 
 ---
 
-## The Rule of the Pyramid
+## The rule of the pyramid
 
 **Never gather a layer before the layer below it is complete.**
 
 Skipping layers is the root cause of most 3D production failures. It feels faster.
-It isn't. Every skipped layer is a debt that is paid — with interest — at delivery.
+It isn't. Every skipped layer is a debt that is paid, with interest, at delivery.
 
 The pyramid is not about gathering more references. It is about gathering them in
 the right order. A 45-minute pyramid session is more valuable than a 4-hour random gather.
 
 ---
 
-## How to Use This Document
+## How to use this document
 
 1. Start at Layer 1 (Concept). Do not proceed until it is clear.
 2. Run `ref-brief` (or `ref-vfx` / `ref-texture`) to generate queries for each layer.
@@ -212,4 +212,4 @@ the right order. A 45-minute pyramid session is more valuable than a 4-hour rand
 
 ---
 
-*Part of the Reference Engineering framework — github.com/p4inz-code/3d-ref-skills*
+*Part of the Reference Engineering framework, github.com/p4inz-code/3d-ref-skills*

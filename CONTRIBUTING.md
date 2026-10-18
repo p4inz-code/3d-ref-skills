@@ -1,6 +1,6 @@
 # Contributing to 3d-ref-skills
 
-First — thank you. This pack exists to help 3D artists work better with AI,
+First, thank you. This pack exists to help 3D artists work better with AI,
 and the best people to extend it are 3D artists who know what they're missing.
 
 You don't need to know how to code. If you know 3D production, you can write a skill.
@@ -10,7 +10,7 @@ You don't need to know how to code. If you know 3D production, you can write a s
 ## What makes a good skill for this pack
 
 A good `3d-ref-skills` skill does one thing the artist would otherwise do slowly,
-inconsistently, or forget entirely — in the pre-production and reference phase
+inconsistently, or forget entirely, in the pre-production and reference phase
 of 3D work. Not modeling advice. Not rendering advice. Reference and preparation.
 
 Good candidates:
@@ -97,7 +97,7 @@ be saved?]
 ## Code of conduct
 
 Be direct, be specific, and be useful. This pack exists to give 3D artists
-real production guidance — not vague encouragement. If you're reviewing a PR,
+real production guidance, not vague encouragement. If you're reviewing a PR,
 focus on whether the skill produces output an artist would actually use.
 
 Questions? Open an issue or reach out at [github.com/p4inz-code](https://github.com/p4inz-code).

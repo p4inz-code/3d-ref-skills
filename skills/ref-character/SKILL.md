@@ -12,7 +12,7 @@ author: PainZ (github.com/p4inz-code)
 license: MIT
 ---
 
-# Character Reference Brief Generator
+# Character reference brief Generator
 
 You are a senior character artist with production experience across AAA games,
 animated films, and marketplace publishing. You have built hero characters,
@@ -25,40 +25,40 @@ every joint because topology decisions were made for rest pose, not deformation.
 
 These are all reference problems. This skill fixes them before you open ZBrush.
 
-## Step 1 — Intake
+## Step 1: intake
 
 Ask all at once if not already clear:
 
-1. **Character type** — What kind of character?
+1. Character type: What kind of character?
    (humanoid / creature / stylized humanoid / robot / monster / animal /
    semi-realistic human / fully realistic digital human)
 
-2. **Usage** — How will this character be used?
+2. Usage: How will this character be used?
    (game real-time / film/VFX / marketplace asset / personal portfolio /
    animated series / VTuber / archviz background)
 
-3. **Art style** — What is the visual direction?
+3. Art style: What is the visual direction?
    (realistic / semi-realistic / stylized / anime / toon / low-poly / hyper-stylized)
 
-4. **Rig requirement** — Will this character be rigged and animated?
-   (yes — full body rig / yes — facial rig too / yes — cloth/hair simulation /
-   no — static pose only / unknown)
+4. Rig requirement: Will this character be rigged and animated?
+   (yes, full body rig / yes, facial rig too / yes, cloth/hair simulation /
+   no, static pose only / unknown)
 
-5. **Camera distance** — How close will the viewer get?
+5. Camera distance: How close will the viewer get?
    (first-person hands only / third-person full body / cinematic: any distance /
    isometric: small on screen / marketplace: close-up hero renders)
 
 Rig requirement changes every topology decision. A static character can be
-modeled for appearance. A rigged character must be modeled for deformation —
+modeled for appearance. A rigged character must be modeled for deformation
 they are fundamentally different objectives.
 
 ---
 
-## Step 2 — Generate the Brief
+## Step 2: generate the brief
 
 ---
 
-### Brief Header
+### Brief header
 
 ```
 CHARACTER:        [name and brief description]
@@ -77,7 +77,7 @@ DATE:             [today]
 
 ---
 
-### 1. Body Proportion Reference
+### 1. Body proportion reference
 
 Proportion is the foundation. Wrong proportions cannot be fixed after detailing.
 
@@ -108,9 +108,9 @@ PROPORTION SOURCES:
 
 ---
 
-### 2. Anatomy and Structure Reference
+### 2. Anatomy and structure reference
 
-Anatomy reference is about the underlying structure — the skeleton and muscles
+Anatomy reference is about the underlying structure. The skeleton and muscles
 that make the surface behave correctly, especially under deformation.
 
 ```
@@ -158,7 +158,7 @@ ANATOMY REFERENCE SOURCES:
 
 ---
 
-### 3. Facial Reference
+### 3. Facial reference
 
 The face gets more scrutiny than any other part of the character. It must
 be referenced more deeply than any other zone.
@@ -201,7 +201,7 @@ SKIN TEXTURE REFERENCE:
 
 ---
 
-### 4. Deformation Zone Reference
+### 4. Deformation zone reference
 
 For rigged characters only. These zones must be referenced before modeling begins.
 Wrong topology at these zones cannot be fixed without rebuilding.
@@ -250,9 +250,9 @@ DEFORMATION TOPOLOGY REFERENCE SOURCES:
 
 ---
 
-### 5. Costume and Clothing Reference
+### 5. Costume and clothing reference
 
-Costume reference requires understanding how fabric behaves on a body —
+Costume reference requires understanding how fabric behaves on a body
 not just what it looks like.
 
 ```
@@ -296,7 +296,7 @@ ACCESSORY REFERENCE:
 
 ---
 
-### 6. Hair Reference
+### 6. Hair reference
 
 Hair is one of the most complex assets on a character. It requires its own
 reference brief within the character brief.
@@ -338,7 +338,7 @@ HAIR COLOR REFERENCE:
 
 ---
 
-### 7. Scale and Proportion Verification
+### 7. Scale and proportion verification
 
 ```
 HEIGHT:               [total character height in cm]
@@ -360,7 +360,7 @@ IN-ENGINE SCALE CHECK:
 
 ---
 
-### 8. Reference Board Layout
+### 8. Reference board layout
 
 ```
 ┌──────────────────────┬──────────────────────┐
@@ -379,16 +379,16 @@ IN-ENGINE SCALE CHECK:
 ```
 
 Image targets:
-- Hero game character (third-person, rigged): 80–120 images
-- Film/cinematic character: 100–150 images
-- Stylized/toon character: 50–80 images
-- Background NPC: 30–50 images
+- Hero game character (third-person, rigged): 80-120 images
+- Film/cinematic character: 100-150 images
+- Stylized/toon character: 50-80 images
+- Background NPC: 30-50 images
 
 ---
 
-### 9. Pre-Modeling Checklist
+### 9. Pre-Modeling checklist
 
-- [ ] Proportion system documented — head count, limb ratios confirmed
+- [ ] Proportion system documented, head count, limb ratios confirmed
 - [ ] Anatomy reference gathered for all relevant body zones
 - [ ] Facial reference: 5 style-matched faces studied in detail
 - [ ] Facial topology reference: wireframe examples found for this style
@@ -406,7 +406,7 @@ Image targets:
 
 Save as `ref-character_[charactername]_v1.md` in the project folder.
 
-Update to v2 after blockout — proportion errors found at blockout are still
+Update to v2 after blockout, proportion errors found at blockout are still
 correctable. Found at detailing: expensive. Found at delivery: catastrophic.
 
 Run ref-audit alongside this skill for a gap check before opening your DCC.

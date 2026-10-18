@@ -1,9 +1,9 @@
-# V2 STRUCTURE — 3d-ref-skills
+# V2 STRUCTURE: 3d-ref-skills
 Designed: 2026-06-20
 
 ---
 
-## Repository Hierarchy
+## Repository hierarchy
 
 ```
 3d-ref-skills/
@@ -65,7 +65,7 @@ Designed: 2026-06-20
 
 ---
 
-## Skill Hierarchy
+## Skill hierarchy
 
 Skills are organized by production phase, not by asset type.
 
@@ -90,7 +90,7 @@ DELIVERY PHASE
 
 ---
 
-## Documentation Hierarchy
+## Documentation hierarchy
 
 Documents are organized by purpose: discipline → system → workflow → reference.
 
@@ -118,7 +118,7 @@ SOURCE LAYER (where to gather)
 
 ---
 
-## Workflow Hierarchy
+## Workflow hierarchy
 
 The Reference Engineering workflow in order:
 
@@ -144,7 +144,7 @@ The Reference Engineering workflow in order:
 
 ---
 
-## Examples Hierarchy
+## Examples hierarchy
 
 Examples are organized by skill, named by asset type.
 
@@ -162,27 +162,27 @@ Examples are never:
 
 ---
 
-## Future Expansion Hierarchy
+## Future expansion hierarchy
 
 Skills can be added in three tiers:
 
-**Tier 1 — Production Phase Skills (highest priority)**
+**Tier 1, Production Phase Skills (highest priority)**
 Skills that address a distinct production phase with unique reference needs not covered by existing skills.
-- `ref-character` — Character reference deep-dive (anatomy, facial topology, deformation)
-- `ref-archviz` — Architecture and visualization reference
-- `ref-hardsurface` — Hard surface reference specialist (panel systems, greebling, industrial design)
-- `ref-creature` — Creature design reference (anatomy departure rules, surface variation)
+- `ref-character`: Character reference deep-dive (anatomy, facial topology, deformation)
+- `ref-archviz`: Architecture and visualization reference
+- `ref-hardsurface`: Hard surface reference specialist (panel systems, greebling, industrial design)
+- `ref-creature`: Creature design reference (anatomy departure rules, surface variation)
 
-**Tier 2 — Specialist Skills (medium priority)**
+**Tier 2, Specialist Skills (medium priority)**
 Skills for specific communities with unique reference workflows.
-- `ref-concept` — Concept-to-3D reference translation
-- `ref-vehicle` — Vehicle-specific reference (blueprints, mechanical reference, LOD strategy)
-- `ref-environment-kit` — Modular kit design reference (grid planning, hero vs filler ratio)
+- `ref-concept`: Concept-to-3D reference translation
+- `ref-vehicle`: Vehicle-specific reference (blueprints, mechanical reference, LOD strategy)
+- `ref-environment-kit`: Modular kit design reference (grid planning, hero vs filler ratio)
 
-**Tier 3 — Integration Skills (lower priority, requires ecosystem)**
+**Tier 3, Integration Skills (lower priority, requires ecosystem)**
 Skills that integrate with specific tools beyond PureRef/Kanvaz.
-- `ref-substance` — Substance Designer-specific reference workflow
-- `ref-zbrush` — ZBrush sculptural reference (plane breaks, form language, noise reference)
+- `ref-substance`: Substance Designer-specific reference workflow
+- `ref-zbrush`: ZBrush sculptural reference (plane breaks, form language, noise reference)
 
 **Rejection criteria for new skills:**
 - Duplicates reference type already covered by existing skill

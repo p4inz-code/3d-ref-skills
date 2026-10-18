@@ -1,11 +1,11 @@
-# Reference System — How the Skills Connect
+# Reference system: how the skills connect
 
 The skills in this repository are not independent tools. They are phases of a single workflow.
 This document explains what each skill produces, what it consumes, and how they chain together.
 
 ---
 
-## The Workflow
+## The workflow
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
@@ -99,7 +99,7 @@ This document explains what each skill produces, what it consumes, and how they 
 
 ---
 
-## What Each Skill Produces and Consumes
+## What each skill produces and consumes
 
 | Skill | Consumes | Produces | Next skill uses it |
 |-------|----------|----------|-------------------|
@@ -108,12 +108,12 @@ This document explains what each skill produces, what it consumes, and how they 
 | `ref-texture` | Material description | Texture reference brief | Used directly in texturing |
 | `ref-style-decode` | Reference image or description | Style decode + Apply This actions | Feeds back into `ref-brief` |
 | `ref-audit` | Reference board description | Audit report with gaps | Feeds back into gather phase |
-| `ref-marketplace` | Asset + marketplace target | Modeling + marketing brief | Terminal — used at delivery |
-| `ref-client` | Commission + client references | Scope alignment document | Terminal — used at delivery |
+| `ref-marketplace` | Asset + marketplace target | Modeling + marketing brief | Terminal, used at delivery |
+| `ref-client` | Commission + client references | Scope alignment document | Terminal, used at delivery |
 
 ---
 
-## When to Re-Run Skills
+## When to Re-Run skills
 
 Skills are not single-use. Run them at multiple stages of production:
 
@@ -148,7 +148,7 @@ Skills are not single-use. Run them at multiple stages of production:
 
 ---
 
-## The Compounding Effect
+## The compounding effect
 
 Each skill makes the next skill more effective:
 
@@ -158,12 +158,12 @@ A thorough `ref-style-decode` means `ref-brief` produces more targeted queries.
 A thorough `ref-marketplace` means the asset's marketing references align with its modeling references.
 
 Artists who use the skills in sequence consistently report fewer mid-production revisions,
-fewer delivery failures, and more confidence during modeling — because every decision
+fewer delivery failures, and more confidence during modeling. Because every decision
 has a reference that supports it.
 
 ---
 
-## Quick Reference — Which Skill Do I Need Right Now?
+## Quick reference: which skill do I need right now?
 
 | Situation | Skill |
 |-----------|-------|
@@ -175,4 +175,4 @@ has a reference that supports it.
 | My reference board feels shallow | `ref-audit` |
 | I'm selling this on Fab / Sketchfab | `ref-marketplace` |
 | I have a freelance commission | `ref-client` |
-| I don't know where to start | `ref-brief` — always start here |
+| I don't know where to start | `ref-brief`, always start here |

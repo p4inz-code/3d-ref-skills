@@ -1,4 +1,4 @@
-# Reference Mistakes
+# Reference mistakes
 
 The most common quality problems in 3D production are reference problems.
 Not modeling problems. Not texturing problems. Reference problems.
@@ -8,7 +8,7 @@ Use it when your work looks wrong and you can't identify why.
 
 ---
 
-## MISTAKE 1 — Modeling From a Single Perspective Reference
+## MISTAKE 1: modeling from a single perspective reference
 
 **What happens:**
 The artist finds one good 3/4 view photo of the asset and models from it.
@@ -20,7 +20,7 @@ at delivery when the asset is rotated.
 
 **Why it happens:**
 A perspective photo embeds the camera's lens distortion and viewing angle into
-the artist's mental model of the object. They are not modeling the object —
+the artist's mental model of the object. They are not modeling the object
 they are modeling the photo.
 
 **The fix:**
@@ -32,10 +32,10 @@ and use them simultaneously. Never model from a single image.
 
 ---
 
-## MISTAKE 2 — The Mood Board Instead of a Reference Board
+## MISTAKE 2: the mood board instead of a reference board
 
 **What happens:**
-The artist collects images of things that "feel right" — atmospheric shots,
+The artist collects images of things that "feel right", atmospheric shots,
 color-matched photos, vibe-establishing images. The board looks great.
 It provides almost no production value.
 
@@ -52,14 +52,14 @@ looks organized. It does not produce a board that supports modeling decisions.
 Separate mood reference (for atmosphere, color direction, emotional register)
 from production reference (for shape, proportion, material, detail). Both
 are valid. They are not the same. A production board needs close-up photographs
-of real surfaces, measured drawings, and scale anchors — not aesthetic photography.
+of real surfaces, measured drawings, and scale anchors. Not aesthetic photography.
 
 **This mistake costs:** Hours of modeling without direction, followed by rework
 when the mood board can't answer the question "what does the edge bevel look like."
 
 ---
 
-## MISTAKE 3 — No Scale Anchor
+## MISTAKE 3: no scale anchor
 
 **What happens:**
 The artist models the asset at a size that "looks right" in the viewport
@@ -67,25 +67,25 @@ without establishing real-world dimensions or verifying scale in-engine.
 
 **Symptom:**
 The asset looks correct in isolation. When placed next to a character or
-environment piece in-engine, it reads as the wrong size — often too small.
+environment piece in-engine, it reads as the wrong size, often too small.
 The asset is delivered and fails QA for scale.
 
 **Why it happens:**
 Viewport modeling is scale-agnostic. The viewport shows you what you're making,
 not how large it is. Without a reference object at known size, every size
-decision is made by eye — and the eye has no absolute scale reference.
+decision is made by eye. And the eye has no absolute scale reference.
 
 **The fix:**
 Document real-world dimensions (H × W × D in cm or m) before modeling.
 Place a 1.75m reference cube or UE5 mannequin in the scene before the first
 polygon. Check scale in-engine before detailing begins.
 
-**This mistake costs:** Scale rework after delivery, or worse — an asset that
+**This mistake costs:** Scale rework after delivery, or worse, an asset that
 ships at the wrong size and breaks scene composition.
 
 ---
 
-## MISTAKE 4 — One Reference For All Surfaces
+## MISTAKE 4: one reference for all surfaces
 
 **What happens:**
 The artist finds a single overview photo of the entire asset and uses it
@@ -98,12 +98,12 @@ painted wood. The fabric looks like rubber. No surface reads as what it is.
 
 **Why it happens:**
 An overview photo shows the object. It does not show the material. A photo
-of a crate from 3 meters away shows the shape of the crate — but not the
+of a crate from 3 meters away shows the shape of the crate. But not the
 grain direction of the wood, the oxidation pattern at the nail heads,
 or the fiber texture of the rope handles.
 
 **The fix:**
-One reference cluster per material. Not one cluster for the whole asset —
+One reference cluster per material. Not one cluster for the whole asset
 one cluster for each distinct surface type. Concrete gets concrete macro photos.
 Metal gets metal macro photos. Every surface type, separately.
 
@@ -112,7 +112,7 @@ in final delivery. Re-texturing entire surfaces.
 
 ---
 
-## MISTAKE 5 — Random Imperfection
+## MISTAKE 5: random imperfection
 
 **What happens:**
 The artist adds wear, damage, and dirt to the surface without reference
@@ -126,7 +126,7 @@ artist's brush went. The surface looks "worn" but not physically convincing.
 **Why it happens:**
 Artists know that real surfaces have imperfections. Without reference showing
 the specific logic of how those imperfections form on this specific material,
-they approximate — and the approximation is always random.
+they approximate, and the approximation is always random.
 
 Real imperfection is never random. It follows physical law:
 - Rust forms where metal meets moisture
@@ -138,7 +138,7 @@ Real imperfection is never random. It follows physical law:
 
 **The fix:**
 Gather imperfection reference specific to this material type and this wear
-condition. Study where imperfections concentrate — not just what they look like.
+condition. Study where imperfections concentrate, not just what they look like.
 Understand the physical logic before applying anything.
 
 **This mistake costs:** Surfaces that fail believability at close range.
@@ -147,11 +147,11 @@ consciously identify what is wrong.
 
 ---
 
-## MISTAKE 6 — Copying Instead of Understanding
+## MISTAKE 6: copying instead of understanding
 
 **What happens:**
-The artist uses a reference to copy the visual result — matching colors, shapes,
-and details from the reference directly — rather than understanding the principles
+The artist uses a reference to copy the visual result: matching colors, shapes,
+and details from the reference directly, rather than understanding the principles
 that make the reference work.
 
 **Symptom:**
@@ -166,17 +166,17 @@ produces something original.
 
 **The fix:**
 Before gathering any reference, ask: "What am I trying to understand from this?"
-Use `ref-style-decode` to break the reference into transferable principles —
-shape language, surface quality, detail density, color architecture — and apply
+Use `ref-style-decode` to break the reference into transferable principles
+shape language, surface quality, detail density, color architecture. And apply
 those principles to your own original design. The result will be better than
 a copy because you understand why it works.
 
-**This mistake costs:** Assets that look derivative, or worse — assets that
+**This mistake costs:** Assets that look derivative, or worse, assets that
 are legally problematic copies of existing IP.
 
 ---
 
-## MISTAKE 7 — Gathering References After Modeling Begins
+## MISTAKE 7: gathering references after modeling begins
 
 **What happens:**
 The artist starts modeling immediately and gathers reference "as needed"
@@ -204,7 +204,7 @@ and assets that accumulate reference-driven inconsistencies throughout the build
 
 ---
 
-## MISTAKE 8 — No Lighting Reference
+## MISTAKE 8: no lighting reference
 
 **What happens:**
 The artist models and textures the asset without reference for the specific
@@ -212,7 +212,7 @@ lighting environment it will live in at delivery.
 
 **Symptom:**
 The asset looks correct in the modeling viewport or in a studio light setup,
-and reads differently — sometimes dramatically so — in the destination engine
+and reads differently, sometimes dramatically so, in the destination engine
 with its actual HDRI, Lumen setup, or cinematic lighting.
 
 Surface roughness that produces a beautiful specular in three-point lighting
@@ -221,7 +221,7 @@ reads powerfully in studio lighting disappears into noise under golden hour.
 
 **Why it happens:**
 Modeling and texturing tools show assets under generic lighting. Artists
-optimize for what they see, which is the tool's default light — not the
+optimize for what they see, which is the tool's default light. Not the
 destination environment's actual light.
 
 **The fix:**
@@ -231,12 +231,12 @@ engine early. Make a roughness test sphere visible in the working environment
 and calibrate surface values against actual destination lighting, not default.
 
 **This mistake costs:** Texture rework after final lighting is established.
-In production pipelines, this is expensive — lighting artists don't want to
+In production pipelines, this is expensive, lighting artists don't want to
 adjust their rigs for incorrectly calibrated assets.
 
 ---
 
-## MISTAKE 9 — Wrong Scale of Detail
+## MISTAKE 9: wrong scale of detail
 
 **What happens:**
 The artist gathers close-up macro reference but references it at the wrong
@@ -245,13 +245,13 @@ scale relative to the asset's actual texel density.
 **Symptom:**
 Panel lines that are too wide. Rivets that are too large. Surface grain that
 tiles obviously. Thread counts on fabric that look like rope rather than cloth.
-Every detail is wrong by the same factor — because the reference was the right
+Every detail is wrong by the same factor. Because the reference was the right
 detail at the wrong scale.
 
 **Why it happens:**
 A close-up photo of a rivet looks like a certain size on screen. Without
 knowing the real-world size of the rivet in the photo, the artist scales
-their modeled rivet to match the photo — but the photo might be showing
+their modeled rivet to match the photo. But the photo might be showing
 a 3mm rivet at 20× magnification.
 
 **The fix:**
@@ -265,12 +265,12 @@ geometry or baked detail.
 
 ---
 
-## MISTAKE 10 — VFX Without Motion Reference
+## MISTAKE 10: VFX without motion reference
 
 **What happens:**
 The VFX artist builds a fire, explosion, or smoke simulation based on what
-they think it should look like — adjusting parameters until it "looks good"
-in the viewport — without reference for how the real-world effect actually moves.
+they think it should look like, adjusting parameters until it "looks good"
+in the viewport, without reference for how the real-world effect actually moves.
 
 **Symptom:**
 Fire that doesn't rise. Smoke that dissipates too fast. Explosions that expand
@@ -290,7 +290,7 @@ and real-world photography. Know what the effect does in reality at the target
 scale before setting a single simulation parameter.
 
 **This mistake costs:** Endless parameter iteration with no physical target.
-VFX that ships and is described by players as "not feeling right" — feedback
+VFX that ships and is described by players as "not feeling right", feedback
 that is correct and unactionable without a reference-grounded rebuild.
 
 ---
@@ -313,4 +313,4 @@ When production precedes understanding, every decision feels uncertain.
 ---
 
 *Reference Mistakes v2.1.0*
-*github.com/p4inz-code/3d-ref-skills — MIT License*
+*github.com/p4inz-code/3d-ref-skills, MIT License*

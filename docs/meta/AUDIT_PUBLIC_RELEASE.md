@@ -1,13 +1,13 @@
-# Public Release Audit — 3d-ref-skills v2.1.0
+# Public Release Audit: 3d-ref-skills v2.1.0
 Conducted: 2026-06-20
 Simulated as: Student / Hobbyist / Freelancer / Marketplace Seller / Environment Artist /
               Character Artist / VFX Artist / Technical Artist
 
 ---
 
-## First-Time Visitor Simulation
+## First-Time visitor simulation
 
-### Landing on README.md — cold visitor, 5 seconds
+### Landing on README.md: cold visitor, 5 seconds
 
 QUESTION: What is this?
 ANSWER:   Clear in first 3 lines. "Reference Engineering for 3D Artists. The first AI skill pack
@@ -33,7 +33,7 @@ SCORE:    PASS
 
 ---
 
-## Persona Simulations
+## Persona simulations
 
 ### Student (Beginner, first real asset)
 
@@ -48,19 +48,19 @@ UNNECESSARY: Nothing.
 LOW QUALITY: Nothing.
 TRUST REDUCTION: Nothing.
 
-### Freelancer (2–3 years experience, takes commissions)
+### Freelancer (2-3 years experience, takes commissions)
 
 Lands on README. Immediately sees ref-client. Clicks example output.
 Reads the Revision Risk Register. Stars the repo immediately.
 Installs. Uses ref-client on next commission. Recommends to other freelancers.
 
 CONFUSING: Nothing.
-HIGH VALUE: ref-client Revision Risk Register — the single highest-value section in the pack.
+HIGH VALUE: ref-client Revision Risk Register. The single highest-value section in the pack.
 TRUST REDUCTION: Nothing.
 
 ### Marketplace Seller (selling on Fab)
 
-Lands on README. Sees ref-marketplace. Reads the example — modular ruins kit.
+Lands on README. Sees ref-marketplace. Reads the example, modular ruins kit.
 Recognizes the competitor gap analysis and B2 screenshot set sections.
 Installs immediately. Uses before next Fab submission.
 
@@ -68,7 +68,7 @@ CONFUSING: Nothing.
 HIGH VALUE: ref-marketplace B2 marketing reference section.
 TRUST REDUCTION: Nothing.
 
-### VFX Artist (Niagara / Houdini)
+### VFX artist (Niagara / Houdini)
 
 Lands on README. Sees ref-vfx in skill matrix. Clicks example output.
 Reads the phase breakdown for the Molotov explosion.
@@ -76,7 +76,7 @@ Recognizes the motion reference sourcing section as something they've never seen
 Installs. Shares in VFX Discord server.
 
 CONFUSING: Nothing.
-MISSING: Standalone VFX_REFERENCE_WORKFLOW.md (planned for v3.0 — acceptable gap).
+MISSING: Standalone VFX_REFERENCE_WORKFLOW.md (planned for v3.0, acceptable gap).
 HIGH VALUE: Phase breakdown + motion reference sourcing.
 
 ### Environment Artist (modular kits, UE5)
@@ -103,7 +103,7 @@ TRUST REDUCTION: Nothing.
 
 ---
 
-## What Is Confusing?
+## What is Confusing?
 
 1. The planning documents (RESEARCH_REPORT, FIVE_WHYS_ANALYSIS, V2_STRUCTURE) at root level
    may confuse first-time visitors. They are not harmful, but they break the expected
@@ -114,7 +114,7 @@ TRUST REDUCTION: Nothing.
 
 ---
 
-## What Feels Unfinished?
+## What feels unfinished?
 
 1. No GitHub issue templates. A visitor who wants to report a problem or suggest a skill
    has no guided path. Add in v2.1.1:
@@ -126,28 +126,28 @@ TRUST REDUCTION: Nothing.
 
 ---
 
-## What Feels Unnecessary?
+## What feels unnecessary?
 
 Nothing. Every file passes the Five Whys test documented in FIVE_WHYS_ANALYSIS.md.
 
 ---
 
-## What Feels Low Quality?
+## What feels low quality?
 
 Nothing at this release. Every skill has a filled example. Every document is specific
 and actionable. No filler content detected.
 
 ---
 
-## What Feels Repetitive?
+## What feels repetitive?
 
 Slight repetition between REFERENCE_SYSTEM.md and README workflow diagram.
-This is intentional — the README workflow is a summary; REFERENCE_SYSTEM.md is the deep version.
+This is intentional, the README workflow is a summary; REFERENCE_SYSTEM.md is the deep version.
 Not a problem.
 
 ---
 
-## What Is Difficult to Navigate?
+## What is Difficult to navigate?
 
 The root level has more files than a typical repo (12 at root).
 The Repository Map in README mitigates this entirely.
@@ -155,7 +155,7 @@ Acceptable for v2.1.0. Reduce root clutter in v3.0 by moving planning docs to do
 
 ---
 
-## What Would Reduce Trust?
+## What would reduce trust?
 
 1. If the `claude skill add` command fails, a first-time user will lose trust immediately.
    Mitigation: Manual install is prominently documented as the primary path.
@@ -165,7 +165,7 @@ Acceptable for v2.1.0. Reduce root clutter in v3.0 by moving planning docs to do
 
 ---
 
-## Release Decision
+## Release decision
 
 **APPROVED FOR PUBLIC RELEASE**
 
@@ -174,15 +174,15 @@ Trust signals are strong: filled examples, MIT license, professional documentati
 named discipline, cross-repo Kanvaz ecosystem.
 
 Quality Gate Assessment:
-Clarity:                9.5/10 ✅
-Usefulness:             9.5/10 ✅
-Navigation:             9.0/10 ✅
-Documentation:          9.5/10 ✅
-Shareability:           9.5/10 ✅
-Retention:              9.0/10 ✅
-Professionalism:        9.5/10 ✅
-Beginner Value:         9.0/10 ✅
-Professional Value:     9.5/10 ✅
-Contributor Experience: 8.5/10 ✅
+Clarity: 9.5/10
+Usefulness: 9.5/10
+Navigation: 9.0/10
+Documentation: 9.5/10
+Shareability: 9.5/10
+Retention: 9.0/10
+Professionalism: 9.5/10
+Beginner Value: 9.0/10
+Professional Value: 9.5/10
+Contributor Experience: 8.5/10
 
 All categories >= 8.5/10. Quality gate passed.

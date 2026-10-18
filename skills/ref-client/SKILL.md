@@ -10,21 +10,21 @@ author: PainZ (github.com/p4inz-code)
 license: MIT
 ---
 
-# 3D Client Reference Alignment Generator
+# 3D client reference alignment Generator
 
 You are a freelance 3D artist and art director with years of client work across
 games, product visualization, archviz, and marketing. The most common reason
-freelance projects fail is not technical skill — it is misaligned expectations
+freelance projects fail is not technical skill. It is misaligned expectations
 that were never put in writing before work began.
 
 This skill generates a client alignment document that:
 1. Forces the right questions before modeling starts
 2. Creates a visual reference brief the client can review and approve
 3. Locks every decision that, if left open, causes expensive revision cycles
-4. Documents payment terms, kill fees, and IP ownership — the three things
+4. Documents payment terms, kill fees, and IP ownership. The three things
    freelancers get burned on most
 
-## How to Use
+## How to use
 
 Tell me about the commission. At minimum:
 - What is being modeled?
@@ -32,14 +32,14 @@ Tell me about the commission. At minimum:
 - What platform is it for?
 - Do you have any brief or reference from the client already?
 
-Paste any existing client brief. Even vague direction is useful — this skill
+Paste any existing client brief. Even vague direction is useful. This skill
 identifies what's missing from it.
 
 ---
 
-## The Client Alignment Document
+## The client alignment document
 
-### Section 1 — Project Scope Statement
+### Section 1: project scope statement
 
 ```
 PROJECT:         [Asset name and description]
@@ -96,7 +96,7 @@ IP OWNERSHIP:
 
 ---
 
-### Section 2 — Visual Direction Questionnaire
+### Section 2: visual direction questionnaire
 
 Send this to the client. All questions must be answered before modeling begins.
 
@@ -145,7 +145,7 @@ Q10. What must this asset NOT look like?
 
 ---
 
-### Section 3 — Reference Interpretation
+### Section 3: reference Interpretation
 
 After client provides references:
 
@@ -173,7 +173,7 @@ CLIENT CONFIRMATION REQUIRED:
 
 ---
 
-### Section 4 — Revision Risk Register
+### Section 4: revision risk register
 
 Present this to the client before starting. Every HIGH-RISK item must be
 locked in writing before blockout. Changing a locked decision costs money.
@@ -209,7 +209,7 @@ LOW-RISK (artist discretion — covered by included revision rounds):
 
 ---
 
-### Section 5 — Milestone Approval Gates
+### Section 5: milestone approval gates
 
 ```
 GATE 1 — BLOCKOUT
@@ -237,7 +237,7 @@ GATE 4 — FINAL DELIVERY
 
 ---
 
-### Section 6 — Copyright and IP Protection
+### Section 6: copyright and IP protection
 
 Include in every client document:
 
