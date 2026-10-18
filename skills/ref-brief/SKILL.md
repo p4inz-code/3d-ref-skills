@@ -100,12 +100,12 @@ List every orthographic view needed and the best source to find it.
 
 | View | Needed | Source / Notes |
 |------|--------|----------------|
-| Front | | [specific source] |
-| Side (left) | | [source] |
+| Front | Yes | [specific source] |
+| Side (left) | Yes | [source] |
 | Side (right) | [/–] | [source or "mirror of left if symmetrical"] |
-| Top | | [source] |
+| Top | Yes | [source] |
 | Bottom | [/–] | [only if bottom is visible in-engine] |
-| 3/4 hero angle | | [source, this is your Marmoset/UE5 presentation angle] |
+| 3/4 hero angle | Yes | [source, this is your Marmoset/UE5 presentation angle] |
 | Cross-section | [/–] | [needed for complex internal structures] |
 
 If real-world orthographic blueprints exist (vehicles, weapons, architecture),

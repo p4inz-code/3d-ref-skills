@@ -37,12 +37,12 @@ Pinterest for mood, Google Images for real wooden crate macro shots.
 
 | View | Needed | Source / Notes |
 |------|--------|----------------|
-| Front | | "wooden ammo crate front blueprint site:pinterest.com", or construct from side |
-| Side (left) | | Same source, mil-spec crates are documented |
+| Front | Yes | "wooden ammo crate front blueprint site:pinterest.com", or construct from side |
+| Side (left) | Yes | Same source, mil-spec crates are documented |
 | Side (right) | – | Mirror of left, crate is symmetrical on this axis |
-| Top | | Real-world ammo box top view (lid construction detail critical) |
+| Top | Yes | Real-world ammo box top view (lid construction detail critical) |
 | Bottom | – | Not visible in-game, skip |
-| 3/4 hero angle | | ArtStation post-apoc prop renders, this is the in-game camera angle |
+| 3/4 hero angle | Yes | ArtStation post-apoc prop renders, this is the in-game camera angle |
 | Cross-section | – | Internal construction not visible, not needed |
 
 Real mil-spec wooden crate blueprints are public domain (US Army field manuals).

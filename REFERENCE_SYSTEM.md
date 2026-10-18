@@ -163,7 +163,7 @@ has a reference that supports it.
 
 ---
 
-## Quick reference: which skill do I need right now?
+## Quick reference, which skill do I need right now?
 
 | Situation | Skill |
 |-----------|-------|

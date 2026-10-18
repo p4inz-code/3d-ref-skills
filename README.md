@@ -4,9 +4,7 @@
 
 ### Reference engineering for 3D artists
 
-**The first AI skill pack built entirely for pre-production reference workflows.**
-
-Nine skills. Free forever. MIT. Works with any DCC, any engine, any AI agent.
+The first AI skill pack built entirely for pre-production reference workflows. It has nine skills, it is free forever under the MIT license, and it works with any DCC, engine or AI agent.
 
 [![Version](https://img.shields.io/badge/version-3.0.0-blue)](./CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
@@ -18,18 +16,16 @@ Nine skills. Free forever. MIT. Works with any DCC, any engine, any AI agent.
 
 ---
 
-## The real reason your model looks wrong
+## Why your model looks wrong
 
-Not your topology. Not your textures. Not your lighting.
+It usually isn't the topology, the textures or the lighting. It's the reference board.
 
-Your reference board.
+> Shallow silhouette refs, no scale anchor, one mood board for seven materials,
+> imperfections placed randomly, VFX tuned by guesswork.
+> The model looks wrong and the artist blames their own skill.
+> The cause is always the reference.
 
-> Shallow silhouette refs. No scale anchor. One mood board for seven materials.
-> Imperfections placed randomly. VFX tuned by guesswork.
-> The model looks wrong. The artist blames their skill.
-> **The real cause is always the reference.**
-
-`3d-ref-skills` solves this before you open your DCC.
+`3d-ref-skills` deals with this before you open your DCC.
 
 ---
 
@@ -38,7 +34,7 @@ Your reference board.
 Nine AI skills that implement **Reference Engineering**. The discipline of
 systematically gathering, validating, and auditing references before production begins.
 
-Run a skill. Get a structured document. Build the right board. Model with confidence.
+Run a skill, get a structured document, build the right board, then model with confidence.
 
 → [What is Reference Engineering?](./REFERENCE_ENGINEERING.md)
 → [What order should I gather in?](./REFERENCE_PYRAMID.md)
