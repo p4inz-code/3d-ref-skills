@@ -31,7 +31,7 @@ It usually isn't the topology, the textures or the lighting. It's the reference 
 
 ## What is this?
 
-Nine AI skills that implement **Reference Engineering**. The discipline of
+Nine AI skills that implement Reference Engineering, the discipline of
 systematically gathering, validating, and auditing references before production begins.
 
 Run a skill, get a structured document, build the right board, then model with confidence.
@@ -79,7 +79,7 @@ Run a skill, get a structured document, build the right board, then model with c
 <!-- Record: type "I'm about to model a rusted cargo crate for UE5" → show full brief generating -->
 <!-- Replace this comment block with: ![ref-brief demo](./docs/demo.gif) -->
 
-> **Demo coming soon.** In the meantime, see the full example outputs below.
+> Demo coming soon. In the meantime, see the full example outputs below.
 
 ---
 
@@ -103,14 +103,14 @@ Real outputs. Real asset types. Not shortened for the README.
 
 | Skill | Example |
 |-------|---------|
-| `ref-brief` | [Zombie Barricade Crate — UE5 game prop](./skills/ref-brief/examples/zombie-barricade-crate-brief.md) |
-| `ref-vfx` | [Molotov Explosion — HTML5 Dead Corps game](./skills/ref-vfx/examples/molotov-explosion-vfx-brief.md) |
-| `ref-texture` | [Weathered Concrete PBR — Fab texture pack](./skills/ref-texture/examples/concrete-pbr-texture-brief.md) |
+| `ref-brief` | [Zombie Barricade Crate, UE5 game prop](./skills/ref-brief/examples/zombie-barricade-crate-brief.md) |
+| `ref-vfx` | [Molotov Explosion, HTML5 Dead Corps game](./skills/ref-vfx/examples/molotov-explosion-vfx-brief.md) |
+| `ref-texture` | [Weathered Concrete PBR, Fab texture pack](./skills/ref-texture/examples/concrete-pbr-texture-brief.md) |
 | `ref-style-decode` | [Halo MA40 Assault Rifle, style breakdown](./skills/ref-style-decode/examples/scifi-weapon-style-decode.md) |
 | `ref-audit` | [Zombie Survivor Character, mid-model audit](./skills/ref-audit/examples/zombie-survivor-character-audit.md) |
-| `ref-marketplace` | [Modular Ruins Kit — Fab launch brief](./skills/ref-marketplace/examples/modular-ruins-kit-fab-brief.md) |
+| `ref-marketplace` | [Modular Ruins Kit, Fab launch brief](./skills/ref-marketplace/examples/modular-ruins-kit-fab-brief.md) |
 | `ref-client` | [Sci-Fi Pistol Commission, client alignment](./skills/ref-client/examples/scifi-pistol-client-alignment.md) |
-| `ref-character` | [Zombie Soldier Character — Dead Corps game](./skills/ref-character/examples/zombie-soldier-character-brief.md) |
+| `ref-character` | [Zombie Soldier Character, Dead Corps game](./skills/ref-character/examples/zombie-soldier-character-brief.md) |
 | `ref-hardsurface` | [Volt-9 Energy Pistol, hard surface brief](./skills/ref-hardsurface/examples/volt9-energy-pistol-hardsurface-brief.md) |
 
 ---
@@ -130,7 +130,7 @@ git clone https://github.com/p4inz-code/3d-ref-skills.git
 ```
 Then copy the `skills/` folder into your agent's skills directory.
 
-**No AI agent yet?** [REFERENCE_CHECKLIST.md](./REFERENCE_CHECKLIST.md) works as a standalone print-and-pin checklist. No AI, no install, no account required. Start there →
+No AI agent yet? [REFERENCE_CHECKLIST.md](./REFERENCE_CHECKLIST.md) works as a standalone print-and-pin checklist. No AI, no install, no account required. Start there →
 
 | Agent | Directory |
 |-------|-----------|
@@ -149,7 +149,7 @@ Just describe what you need. No commands. No syntax.
 "I'm about to model a rusted sci-fi cargo crate for UE5."          → ref-brief
 "I'm building a Molotov explosion effect for my game."              → ref-vfx
 "I'm about to texture weathered urban concrete for Fab."            → ref-texture
-"Decode this ArtStation piece — why does it look so good?"          → ref-style-decode
+"Decode this ArtStation piece: why does it look so good?"          → ref-style-decode
 "My character's face looks flat. Audit my reference board."         → ref-audit
 "I'm selling a modular ruins kit on Fab. Give me a launch brief."   → ref-marketplace
 "I have a freelance commission for a sci-fi pistol."                → ref-client
@@ -173,7 +173,7 @@ Everything you need to understand and use the system, with or without AI.
 
 | Document | What it is |
 |----------|-----------|
-| [REFERENCE_ENGINEERING.md](./REFERENCE_ENGINEERING.md) | The discipline — 7 principles, full workflow, terminology |
+| [REFERENCE_ENGINEERING.md](./REFERENCE_ENGINEERING.md) | The discipline: 7 principles, full workflow, terminology |
 | [REFERENCE_PYRAMID.md](./REFERENCE_PYRAMID.md) | The hierarchy, what order to gather in and why |
 | [REFERENCE_SYSTEM.md](./REFERENCE_SYSTEM.md) | The workflow, how all 9 skills connect |
 | [REFERENCE_CHECKLIST.md](./REFERENCE_CHECKLIST.md) | Printable checklist, works without any AI |
